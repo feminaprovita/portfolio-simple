@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-simple",
+  "version": "1.0.0",
+  "description": "A simple reboot of my portfolio site",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feminaprovita/portfolio-simple.git"
+  },
+  "author": "Claire Gilligan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/feminaprovita/portfolio-simple/issues"
+  },
+  "homepage": "https://github.com/feminaprovita/portfolio-simple#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "serverless-http": "^2.0.1"
+  }
+}
