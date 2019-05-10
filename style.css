@@ -1,0 +1,55 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(to right, #add8ff, #dcccfd);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+#profile-container {
+  padding: 1vw;
+  margin: 3vw;
+  background: palegoldenrod;
+  border: 0.5px dashed gray;
+  border-radius: 15px;
+  display: flex;
+}
+
+#profile-pic {
+  padding: 4vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 222px;
+  border-radius: 15px;
+}
+
+#profile-text {
+  padding: 4vw;
+  /* color: darkblue; */
+  text-align: center;
+}
+
+/* #social-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+} */
+
+.social-links {
+  max-height: 18px;
+  max-width: 18px;
+  vertical-align: top;
+}
+
+#twitter-icon {
+  max-height: 24px;
+  max-width: 24px;
+  vertical-align: middle;
+}

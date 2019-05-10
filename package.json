@@ -2,9 +2,10 @@
   "name": "portfolio-simple",
   "version": "1.0.0",
   "description": "A simple reboot of my portfolio site",
-  "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "script/deploy",
+    "start": "node server",
+    "start-server": "nodemon server -e html,js,css"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,6 @@
   "homepage": "https://github.com/feminaprovita/portfolio-simple#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "hbs": "^4.0.4",
-    "serverless-http": "^2.0.1"
+    "morgan": "^1.9.1"
   }
 }
