@@ -1,10 +1,10 @@
 const router = require('express').Router()
 module.exports = router
 
-// router.get('/', async (req, res, next) => {
-//   try {
-//     res.json()
-//     } catch (err) {
-//     next(err)
-//   }
-// })
+router.get('/', (req, res, next) => {
+  try {
+    res.send('../../public/bundle.js')
+    } catch (err) {
+    next(err)
+  }
+})

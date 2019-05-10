@@ -26,7 +26,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   max-width: 222px;
-  border-radius: 15px;
+  /* border-radius: 15%; */
 }
 
 #profile-text {
@@ -34,13 +34,6 @@ a:hover {
   /* color: darkblue; */
   text-align: center;
 }
-
-/* #social-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-} */
 
 .social-links {
   max-height: 18px;
@@ -52,4 +45,11 @@ a:hover {
   max-height: 24px;
   max-width: 24px;
   vertical-align: middle;
+}
+
+#nav-name {
+  text-decoration: wavy;
+  color: #6341a9;
+  text-shadow: 0.13em 0.11em #73b9fa;
+  font-size: 3em;
 }

@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
-const path = require('path')
 const PORT = 4004
+const path = require('path')
 const app = express()
 module.exports = app
 
@@ -33,7 +33,7 @@ const createApp = () => {
 
   // sends index.html
   app.use('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'))
+    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
 
   // error handling endware
