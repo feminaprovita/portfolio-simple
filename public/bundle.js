@@ -117,10 +117,10 @@ var App = function App() {
 
 /***/ }),
 
-/***/ "./client/components/About.js":
-/*!************************************!*\
-  !*** ./client/components/About.js ***!
-  \************************************/
+/***/ "./client/components/Blog.js":
+/*!***********************************!*\
+  !*** ./client/components/Blog.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -128,15 +128,38 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_blogUpdate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data/blogUpdate */ "./data/blogUpdate.js");
+/* harmony import */ var _data_blogUpdate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_blogUpdate__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var About = function About() {
+
+var Blog = function Blog() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "about"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "About"));
+    id: "blog"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Blog Posts"), _data_blogUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (b) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "one-blog",
+      key: b.keyName
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: b.postUrl,
+      target: "blank"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "blog-thumbnail",
+      src: b.imageUrl,
+      alt: b.imgAlt
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "blog-info"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: b.postUrl,
+      target: "blank"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, b.title)), b.summary ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, b.summary) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, b.teaser), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: b.postUrl,
+      target: "blank"
+    }, "Read more..."))));
+  }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (About);
+/* harmony default export */ __webpack_exports__["default"] = (Blog);
 
 /***/ }),
 
@@ -232,18 +255,176 @@ var Navbar = function Navbar() {
   }, "Claire\xA0Gilligan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "navlink-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/Skills",
+    className: "navlink-one"
+  }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/Projects",
     className: "navlink-one"
   }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/Skills",
+    to: "/Blog",
     className: "navlink-one"
-  }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing",
     className: "navlink-one"
   }, "Resum\xE9"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
+
+/***/ }),
+
+/***/ "./client/components/ProjectLinks.js":
+/*!*******************************************!*\
+  !*** ./client/components/ProjectLinks.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+/* eslint-disable no-unused-expressions */
+
+/* eslint-disable complexity */
+
+
+var ProjectLinks =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ProjectLinks, _Component);
+
+  function ProjectLinks() {
+    _classCallCheck(this, ProjectLinks);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ProjectLinks).apply(this, arguments));
+  }
+
+  _createClass(ProjectLinks, [{
+    key: "render",
+    value: function render() {
+      var p = this.props.project;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "project-links"
+      }, p.url && p.blogUrl && !p.github && !p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && p.blogUrl && p.github && !p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && p.blogUrl && p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), !p.url && p.blogUrl && p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), !p.url && p.blogUrl && p.github && !p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), !p.url && p.blogUrl && !p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && p.blogUrl && !p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.blogUrl,
+        target: "blank"
+      }, "Blog Post"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && !p.blogUrl && !p.github && !p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && !p.blogUrl && p.github && !p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && !p.blogUrl && p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), !p.url && !p.blogUrl && p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), !p.url && !p.blogUrl && p.github && !p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.github,
+        target: "blank"
+      }, "Github")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), !p.url && !p.blogUrl && !p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null), p.url && !p.blogUrl && !p.github && p.video ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.url,
+        target: "blank"
+      }, "Website"), "\xA0\xA0\xA0\u2766\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: p.video,
+        target: "blank"
+      }, "Video Presentation")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null));
+    }
+  }]);
+
+  return ProjectLinks;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (ProjectLinks);
 
 /***/ }),
 
@@ -258,12 +439,31 @@ var Navbar = function Navbar() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data/projectsUpdate */ "./data/projectsUpdate.js");
+/* harmony import */ var _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ProjectLinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProjectLinks */ "./client/components/ProjectLinks.js");
+/* eslint-disable react/no-array-index-key */
+
+/* eslint-disable complexity */
+
+
 
 
 var Projects = function Projects() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "projects"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Projects"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Projects"), _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (p) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: p.keyName,
+      id: p.keyName
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, p.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, p.role)), p.bullets && p.bullets.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, p.bullets.map(function (b, i) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: i
+      }, b);
+    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, p.paragraph), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectLinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      project: p
+    }));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Projects);
@@ -281,35 +481,35 @@ var Projects = function Projects() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _seed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../seed */ "./client/seed.js");
-/* harmony import */ var _seed__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_seed__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data_seed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../data/seed */ "./data/seed.js");
+/* harmony import */ var _data_seed__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_seed__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
 var Skills = function Skills() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "skills"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Languages"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].languages.map(function (s, i) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Languages"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].languages.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Frontend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].frontend.map(function (s, i) {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Frontend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].frontend.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Backend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].backend.map(function (s, i) {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Backend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].backend.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Data"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].data.map(function (s, i) {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Data"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].data.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Programs/Services"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].programs.map(function (s, i) {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Programs/Services"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].programs.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Non-Technical"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].nontechnical.map(function (s, i) {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Non-Technical"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].nontechnical.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
@@ -357,13 +557,13 @@ var Splash = function Splash() {
 /*!************************************!*\
   !*** ./client/components/index.js ***!
   \************************************/
-/*! exports provided: About, Footer, Navbar, Projects, Skills, Splash */
+/*! exports provided: Blog, Footer, Navbar, Projects, Skills, Splash */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./About */ "./client/components/About.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "About", function() { return _About__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+/* harmony import */ var _Blog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Blog */ "./client/components/Blog.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Blog", function() { return _Blog__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ "./client/components/Footer.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return _Footer__WEBPACK_IMPORTED_MODULE_1__["default"]; });
@@ -455,16 +655,16 @@ var Routes = function Routes() {
     component: _components__WEBPACK_IMPORTED_MODULE_2__["Splash"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/about",
-    component: _components__WEBPACK_IMPORTED_MODULE_2__["About"]
+    path: "/skills",
+    component: _components__WEBPACK_IMPORTED_MODULE_2__["Skills"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/projects",
     component: _components__WEBPACK_IMPORTED_MODULE_2__["Projects"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/skills",
-    component: _components__WEBPACK_IMPORTED_MODULE_2__["Skills"]
+    path: "/blog",
+    component: _components__WEBPACK_IMPORTED_MODULE_2__["Blog"]
   }));
 }; // The `withRouter` wrapper makes sure that updates are not blocked when the url changes
 
@@ -473,31 +673,143 @@ var Routes = function Routes() {
 
 /***/ }),
 
-/***/ "./client/seed.js":
-/*!************************!*\
-  !*** ./client/seed.js ***!
-  \************************/
+/***/ "./data/blogUpdate.js":
+/*!****************************!*\
+  !*** ./data/blogUpdate.js ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var blogData = [{
-  title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
-  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
-  // imageUrl: 'https://cdn-images-1.medium.com/max/1600/1*7P1FchNLHq7fHjCOrY0wPw.png',
-  imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
-  date: '2019-01-28',
-  teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
-  skills: ['js', 'node', 'git']
-}, {
+module.exports = [{
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
   postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
-  // imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*PT4sFPxT3P_HKSXReGD1Fw.png',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
   date: '2019-03-12',
   summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
   teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
   project: 'Masks Rescue',
-  skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git']
+  skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git'],
+  slug: 'pair-programming-after-bootcamp',
+  keyName: 'pair-programming-after-bootcamp-component',
+  imgAlt: 'pair-programming-after-bootcamp-thumbnail-2019-03-12'
+}, {
+  title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
+  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
+  imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
+  date: '2019-01-28',
+  teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
+  skills: ['js', 'node', 'git'],
+  slug: 'new-to-programming',
+  keyName: 'new-to-programming-component',
+  imgAlt: 'new-to-programming-thumbnail-2019-01-28'
+}];
+
+/***/ }),
+
+/***/ "./data/projectsUpdate.js":
+/*!********************************!*\
+  !*** ./data/projectsUpdate.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [{
+  name: 'Portfolio Website',
+  role: 'Engineer',
+  bullets: ['Database-driven portfolio site with buttons that filter data into or out of render', 'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku', 'Used a combination of responsive design and media queries to style for desktop and mobile', 'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships'],
+  github: 'https://github.com/feminaprovita/cg-com',
+  skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS'],
+  priority: 1,
+  slug: 'portfolio-website',
+  keyName: 'portfolio-website-component',
+  hold: ['https://github.com/feminaprovita/cg-com'],
+  links: 'https://github.com/feminaprovita/cg-com'
+}, {
+  name: 'Masks Google Plus Rescue',
+  role: 'Engineer',
+  paragraph: 'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+  bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
+  github: 'https://github.com/feminaprovita/masks-rescue',
+  blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
+  priority: 2,
+  slug: 'masks-google-plus-rescue',
+  keyName: 'masks-google-plus-rescue-component',
+  hold: ['https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d', 'https://github.com/feminaprovita/masks-rescue'],
+  links: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d   ❦   https://github.com/feminaprovita/masks-rescue'
+}, {
+  name: 'Moodify',
+  role: 'Fullstack Software Engineer',
+  paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search"],
+  url: 'https://my-moodify.herokuapp.com',
+  github: 'https://github.com/grape-emu/my-moodify',
+  video: 'http://bit.ly/moodify-presentation',
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
+  priority: 3,
+  slug: 'moodify',
+  keyName: 'moodify-component',
+  hold: ['<a href=https://my-moodify.herokuapp.com target="blank">Website</a>', 'https://github.com/grape-emu/my-moodify', 'http://bit.ly/moodify-presentation'],
+  links: '<a href=https://my-moodify.herokuapp.com target="blank">Website</a>   ❦   https://github.com/grape-emu/my-moodify   ❦   http://bit.ly/moodify-presentation'
+}, {
+  name: 'Timelink Travel Services',
+  role: 'Fullstack Software Engineer',
+  paragraph: 'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+  bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
+  url: 'https://pm-grace-shopper.herokuapp.com',
+  github: 'https://github.com/pigMercury/grace-shopper',
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
+  priority: 4,
+  slug: 'timelink-travel-services',
+  keyName: 'timelink-travel-services-component',
+  hold: ['<a href=https://pm-grace-shopper.herokuapp.com target="blank">Website</a>', 'https://github.com/pigMercury/grace-shopper'],
+  links: '<a href=https://pm-grace-shopper.herokuapp.com target="blank">Website</a>   ❦   https://github.com/pigMercury/grace-shopper'
+}, {
+  name: 'Keeping Facebook Cheerful',
+  role: 'Solo Engineer',
+  paragraph: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
+  github: 'https://github.com/feminaprovita/kfbc-website',
+  video: 'http://bit.ly/kfbc',
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
+  priority: 5,
+  slug: 'keeping-facebook-cheerful',
+  keyName: 'keeping-facebook-cheerful-component',
+  hold: ['https://github.com/feminaprovita/kfbc-website', 'http://bit.ly/kfbc'],
+  links: 'https://github.com/feminaprovita/kfbc-website   ❦   http://bit.ly/kfbc'
+}];
+
+/***/ }),
+
+/***/ "./data/seed.js":
+/*!**********************!*\
+  !*** ./data/seed.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var blogData = [{
+  title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
+  postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
+  date: '2019-03-12',
+  summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
+  teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
+  project: 'Masks Rescue',
+  skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git'],
+  slug: 'pair-programming-after-bootcamp',
+  keyName: 'pair-programming-after-bootcamp-component',
+  imgAlt: 'pair-programming-after-bootcamp-thumbnail-2019-03-12'
+}, {
+  title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
+  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
+  imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
+  date: '2019-01-28',
+  teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
+  skills: ['js', 'node', 'git'],
+  slug: 'new-to-programming',
+  keyName: 'new-to-programming-component',
+  imgAlt: 'new-to-programming-thumbnail-2019-01-28'
 }];
 var jobData = [{
   jobTitle: 'Freelance Editorial Consultant',
@@ -530,7 +842,8 @@ var projectData = [{
   bullets: ['Database-driven portfolio site with buttons that filter data into or out of render', 'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku', 'Used a combination of responsive design and media queries to style for desktop and mobile', 'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships'],
   // paragraph: '',
   github: 'https://github.com/feminaprovita/cg-com',
-  skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS']
+  skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS'],
+  priority: 1
 }, {
   name: 'Moodify',
   role: 'Fullstack Software Engineer',
@@ -539,7 +852,8 @@ var projectData = [{
   url: 'https://my-moodify.herokuapp.com',
   github: 'https://github.com/grape-emu/my-moodify',
   video: 'http://bit.ly/moodify-presentation',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile']
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
+  priority: 3
 }, {
   name: 'Masks Google Plus Rescue',
   role: 'Engineer',
@@ -547,7 +861,8 @@ var projectData = [{
   bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
   github: 'https://github.com/feminaprovita/masks-rescue',
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
-  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex']
+  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
+  priority: 2
 }, {
   name: 'Keeping Facebook Cheerful',
   role: 'Solo Engineer',
@@ -556,7 +871,8 @@ var projectData = [{
   // url: 'kfbc.herokuapp.com OR clairegilligan.com/kfbc',
   github: 'https://github.com/feminaprovita/kfbc-website',
   video: 'http://bit.ly/kfbc',
-  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk']
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
+  priority: 5
 }, {
   name: 'Timelink Travel Services',
   role: 'Fullstack Software Engineer',
@@ -564,7 +880,8 @@ var projectData = [{
   bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
   url: 'https://pm-grace-shopper.herokuapp.com',
   github: 'https://github.com/pigMercury/grace-shopper',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile']
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
+  priority: 4
 }];
 var schoolData = [{
   fullName: 'Franciscan University of Steubenville',
@@ -39669,7 +39986,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n  color: #6341a9;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* a:link {\n\n}\n\na:visited {\n\n} */\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 3em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n#profile-container {\n  padding: 1vw;\n  margin: 12vw 3vw;\n  background: palegoldenrod;\n  border: 0.5px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n  color: #6341a9;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* a:link {\n\n}\n\na:visited {\n\n} */\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 3em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n#profile-container {\n  padding: 1vw;\n  margin: 12vw 3vw;\n  background: palegoldenrod;\n  border: 0.5px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 0.5px dashed white;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 22vw;\n  max-height: 22vh;\n  flex-shrink: 1;\n}\n", ""]);
 
 
 

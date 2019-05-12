@@ -1,32 +1,27 @@
-const blogData = [
-  {
-    title:
-      'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
-    postUrl:
-      'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
-    // imageUrl: 'https://cdn-images-1.medium.com/max/1600/1*7P1FchNLHq7fHjCOrY0wPw.png',
-    imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
-    date: '2019-01-28',
-    teaser:
-      'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
-    skills: ['js', 'node', 'git']
-  },
-  {
-    title:
-      'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
-    postUrl:
-      'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
-    // imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*PT4sFPxT3P_HKSXReGD1Fw.png',
-    imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
-    date: '2019-03-12',
-    summary:
-      'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
-    teaser:
-      'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
-    project: 'Masks Rescue',
-    skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git']
-  }
-]
+const blogData = [{
+  title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
+  postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
+  date: '2019-03-12',
+  summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
+  teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
+  project: 'Masks Rescue',
+  skills: [ 'js', 'node', 'puppeteer', 'vscode', 'json', 'git' ],
+  slug: 'pair-programming-after-bootcamp',
+  keyName: 'pair-programming-after-bootcamp-component',
+  imgAlt: 'pair-programming-after-bootcamp-thumbnail-2019-03-12'
+}, {
+  title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
+  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
+  imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
+  date: '2019-01-28',
+  teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
+  skills: [ 'js', 'node', 'git' ],
+  slug: 'new-to-programming',
+  keyName: 'new-to-programming-component',
+  imgAlt: 'new-to-programming-thumbnail-2019-01-28'
+}]
+
 
 const jobData = [
   {
@@ -82,12 +77,11 @@ const projectData = [
       'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku',
       'Used a combination of responsive design and media queries to style for desktop and mobile',
       'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships',
-      // 'Learned that git is case-insensitive (and how to fix that), repurposed data with RegEx, added HTML meta tags',
-      // 'Did a lot of post-deployment troubleshooting',
     ],
     // paragraph: '',
     github: 'https://github.com/feminaprovita/cg-com',
-    skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS']
+    skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS'],
+    priority: 1
   },
   {
     name: 'Moodify',
@@ -101,7 +95,8 @@ const projectData = [
     url: 'https://my-moodify.herokuapp.com',
     github: 'https://github.com/grape-emu/my-moodify',
     video: 'http://bit.ly/moodify-presentation',
-    skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile']
+    skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
+    priority: 3
   },
   {
     name: 'Masks Google Plus Rescue',
@@ -114,7 +109,8 @@ const projectData = [
     ],
     github: 'https://github.com/feminaprovita/masks-rescue',
     blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
-    skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex']
+    skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
+    priority: 2
   },
   {
     name: 'Keeping Facebook Cheerful',
@@ -130,7 +126,8 @@ const projectData = [
     // url: 'kfbc.herokuapp.com OR clairegilligan.com/kfbc',
     github: 'https://github.com/feminaprovita/kfbc-website',
     video: 'http://bit.ly/kfbc',
-    skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk']
+    skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
+    priority: 5
   },
   {
     name: 'Timelink Travel Services',
@@ -145,7 +142,8 @@ const projectData = [
     ],
     url: 'https://pm-grace-shopper.herokuapp.com',
     github: 'https://github.com/pigMercury/grace-shopper',
-    skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile']
+    skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
+    priority: 4
   }
 ]
 

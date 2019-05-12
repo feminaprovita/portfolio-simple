@@ -116,3 +116,20 @@ nav a:hover,
   max-height: 24px;
   max-width: 24px;
 }
+
+.one-blog {
+  padding: 1vw;
+  margin: 0.5vw;
+  border: 0.5px dashed white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.blog-thumbnail {
+  padding: 1vw;
+  margin: 0.5vw;
+  max-width: 22vw;
+  max-height: 22vh;
+  flex-shrink: 1;
+}

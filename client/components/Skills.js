@@ -1,5 +1,5 @@
 import React from 'react'
-import {skillsByType} from '../seed'
+import {skillsByType} from '../../data/seed'
 
 const Skills = () => (
   <div id='skills'>
