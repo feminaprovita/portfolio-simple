@@ -2,20 +2,18 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Navbar = () => (
-  <div>
-    <div className="navbar" id="navbar">
-      <Link to="/home" id="nav-name">
-        Claire Gilligan
-      </Link>
-      <nav className="nav-link-container">
-        <Link to="/About">About</Link>
-        <Link to="/Projects">Projects</Link>
-        <Link to="/Skills">Skills</Link>
-        <a href="https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing">Resume</a>
-      </nav>
+  <nav>
+    <div id="navbar">
+      <Link to="/" id="nav-name">Claire&#160;Gilligan</Link>
+      <div id="navlink-container">
+        {/* <Link to="/About" className="navlink-one">About</Link> */}
+        <Link to="/Projects" className="navlink-one">Projects</Link>
+        <Link to="/Skills" className="navlink-one">Skills</Link>
+        <a href="https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing" className="navlink-one">Resumé</a>
+      </div>
     </div>
     <hr />
-  </div>
+  </nav>
 )
 
 export default Navbar

@@ -188,89 +188,34 @@ const schoolData = [
   }
 ]
 
-const skillData = [ {
-    name: 'French',
-    level: 'proficient'
-  }, {
-    name: 'Latin',
-    level: 'familiar'
-  }, {
-    name: 'Proofreading',
-    level: 'expert'
-  }, {
-    name: 'Copyediting',
-    level: 'expert'
-  }, {
-    name: 'JavaScript/ES6',
-    level: 'proficient'
-  }, {
-    name: 'Node',
-    level: 'proficient'
-  }, {
-    name: 'Express',
-    level: 'proficient'
-  }, {
-    name: 'Sequelize',
-    level: 'proficient'
-  }, {
-    name: 'PostgreSQL',
-    level: 'familiar'
-  }, {
-    name: 'React',
-    level: 'proficient'
-  }, {
-    name: 'Redux',
-    level: 'proficient'
-  }, {
-    name: 'HTML5',
-    level: 'proficient'
-  }, {
-    name: 'CSS3',
-    level: 'familiar'
-  }, {
-    name: 'Flexbox',
-    level: 'proficient'
-  }, {
-    name: 'Git/Github',
-    level: 'proficient'
-  }, {
-    name: 'Webpack/Babel',
-    level: 'proficient'
-  }, {
-    name: 'Microsoft Excel',
-    level: 'expert'
-  }, {
-    name: 'Visual Studio Code',
-    level: 'proficient'
-  }, {
-    name: 'Heroku',
-    level: 'proficient'
-  }, {
-    name: 'Puppeteer',
-    level: 'familiar'
-  }, {
-    name: 'Python',
-    level: 'familiar'
-  }, {
-    name: 'JSON',
-    level: 'familiar'
-  }, {
-    name: 'Chalk',
-    level: 'familiar'
-  }, {
-    name: 'Axios',
-    level: 'proficient'
-  }, {
-    name: 'Postman',
-    level: 'proficient'
-  }, {
-    name: 'Agile',
-    level: 'proficient'
-  }, {
-    name: 'RegEx',
-    level: 'familiar'
-  }, {
-    name: 'AWS',
-    level: 'familiar'
-  }
-]
+const skillsByLevel = [{
+  level: 'irrelevant',
+  skills: ['Proofreading', 'Copyediting', 'French', 'Latin']
+}, {
+  level: 'proficient',
+  skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git/Github', 'Webpack/Babel', 'Agile', 'Visual Studio Code', 'Postman', 'Axios', 'Excel', 'Heroku']
+}, {
+  level: 'familiar',
+  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'JSON', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
+}]
+
+const skillsByType = {
+  languages: ['JavaScript/ES6', 'Python3', 'SQL'],
+  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
+  backend: ['Express', 'Sequelize', 'PostgreSQL'],
+  data: ['Puppeteer', 'RegEx'],
+  programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku', 'AWS'],
+  nontechnical: ['Agile', 'Excel', 'Copyediting', 'Proofreading', 'French', 'Latin']
+}
+
+
+
+
+module.exports = {
+  blogData,
+  jobData,
+  projectData,
+  schoolData,
+  skillsByLevel,
+  skillsByType
+}

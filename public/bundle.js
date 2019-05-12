@@ -154,9 +154,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Footer = function Footer() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "social-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "mailto:claire.gilligan.dev@gmail.com"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/email-icon.png",
@@ -222,23 +224,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Navbar = function Navbar() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "navbar",
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "navbar"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/home",
+    to: "/",
     id: "nav-name"
-  }, "Claire Gilligan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "nav-link-container"
+  }, "Claire\xA0Gilligan"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "navlink-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/About"
-  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/Projects"
+    to: "/Projects",
+    className: "navlink-one"
   }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/Skills"
+    to: "/Skills",
+    className: "navlink-one"
   }, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing"
-  }, "Resume"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
+    href: "https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing",
+    className: "navlink-one"
+  }, "Resum\xE9"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -279,15 +281,44 @@ var Projects = function Projects() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _seed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../seed */ "./client/seed.js");
+/* harmony import */ var _seed__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_seed__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var Skills = function Skills() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "skills"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Skills"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Languages"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].languages.map(function (s, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: i
+    }, s);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Frontend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].frontend.map(function (s, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: i
+    }, s);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Backend"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].backend.map(function (s, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: i
+    }, s);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Data"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].data.map(function (s, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: i
+    }, s);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Programs/Services"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].programs.map(function (s, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: i
+    }, s);
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Non-Technical"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].nontechnical.map(function (s, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: i
+    }, s);
+  })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Skills);
+/* harmony default export */ __webpack_exports__["default"] = (Skills); // {this.state.expertSkills.map((s, i) => (
+//   <li key={i}>{s.name}</li>
+// ))}
 
 /***/ }),
 
@@ -315,7 +346,7 @@ var Splash = function Splash() {
     alt: "Claire Gilligan profile picture"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "profile-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Welcome to clairegilligan.com!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm certified for web development (full stack, JavaScript front and back end), but have been enjoying teaching myself Python so I have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm certified for web development (full stack, JavaScript front and back end), but have been enjoying teaching myself Python so I have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -439,6 +470,158 @@ var Routes = function Routes() {
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Routes));
+
+/***/ }),
+
+/***/ "./client/seed.js":
+/*!************************!*\
+  !*** ./client/seed.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var blogData = [{
+  title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
+  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
+  // imageUrl: 'https://cdn-images-1.medium.com/max/1600/1*7P1FchNLHq7fHjCOrY0wPw.png',
+  imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
+  date: '2019-01-28',
+  teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
+  skills: ['js', 'node', 'git']
+}, {
+  title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
+  postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  // imageUrl: 'https://cdn-images-1.medium.com/max/1200/1*PT4sFPxT3P_HKSXReGD1Fw.png',
+  imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
+  date: '2019-03-12',
+  summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
+  teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
+  project: 'Masks Rescue',
+  skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git']
+}];
+var jobData = [{
+  jobTitle: 'Freelance Editorial Consultant',
+  monthStart: 'March 2011',
+  bullets: ['Edit/proofread books in final stage before publication for publishers, nonprofits, authors, grad students', 'Fix grammar and usage errors, apply style guides, add indexing, format footnotes, analyze data'],
+  paragraph: 'Copyediting, proofreading, indexing, stylizing, marketing, writing, and other tasks as requested. Projects have included theology books—scholarly, popular, and devotional; analyses of liturgical data; theses and dissertations; and teacher’s manuals. Ongoing clients include Word On Fire, Liturgy Training Publications, their academic imprint Hillenbrand Books, and Illuminare Publications. Past clients include the Archdiocese of Chicago, C-FAM, Faith and Life, Magnificat, King Richard’s Liturgical Design & Consulting, Liturgical Press, and private persons.',
+  skills: ['proofing', 'copyediting']
+}, {
+  company: 'Magnificat',
+  url: 'http://us.magnificat.net',
+  location: 'Yonkers, NY',
+  jobTitle: 'Assistant Editor',
+  monthStart: 'February 2013',
+  monthEnd: 'August 2018',
+  bullets: ['Editorial miscellany for monthly Catholic devotional (circ. 270,000), books for kids and adults', 'Created several in-house spreadsheets to improve or optimize repeat tasks for self and others', 'Merged marketing texts to harmonize copy across platforms, notably editing the website'],
+  paragraph: 'Proofread, fact-checked, and applied style guide to monthly Catholic worship aid reaching about 270,000 subscribers; also chose hymns for daily offices, suggested/organized occasional liturgical improvements, and aided with translation and marketing tasks. Edited, compiled, and proofread various book projects as needed. Since 2017, also edited bookstore website and ebooks, developed new books, and creatively expanded marketing efforts at minimal expense.',
+  skills: ['proofing, copyediting', 'html', 'french', 'latin']
+}, {
+  company: 'Various choirs',
+  url: 'http://nymcc.org/about-us',
+  jobTitle: 'Vocalist / Alto',
+  monthStart: 'September 1996',
+  bullets: ['Have sung in over a dozen choirs (breaks: July 2014–Aug 2017; June 2018–Feb 2019)', 'Usually alto, but roles have included cantor, soprano, tenor, and “make up a new harmony now, please”', 'Mostly church choirs, at varying skill levels (inc. professional), across a wide range of styles and languages', 'Currently: Metropolitan Catholic Chorale (based in Bronx, NY)'],
+  paragraph: 'Have sung in over a dozen choirs with breaks rarely longer than a few months (exceptions: July 2014–Aug 2017; June 2018–Feb 2019). Usually an alto, but roles have also included cantor, soprano, tenor, and “make up a new harmony now, please.” Mostly church choirs, at varying skill levels (up to professional), across a wide range of styles and languages. Currently in NYC’s Metropolitan Catholic Chorale.',
+  skills: ['latin']
+}];
+var projectData = [{
+  name: 'Portfolio Website',
+  role: 'Engineer',
+  bullets: ['Database-driven portfolio site with buttons that filter data into or out of render', 'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku', 'Used a combination of responsive design and media queries to style for desktop and mobile', 'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships'],
+  // paragraph: '',
+  github: 'https://github.com/feminaprovita/cg-com',
+  skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS']
+}, {
+  name: 'Moodify',
+  role: 'Fullstack Software Engineer',
+  paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify\u2019s search"],
+  url: 'https://my-moodify.herokuapp.com',
+  github: 'https://github.com/grape-emu/my-moodify',
+  video: 'http://bit.ly/moodify-presentation',
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile']
+}, {
+  name: 'Masks Google Plus Rescue',
+  role: 'Engineer',
+  paragraph: 'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+  bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
+  github: 'https://github.com/feminaprovita/masks-rescue',
+  blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex']
+}, {
+  name: 'Keeping Facebook Cheerful',
+  role: 'Solo Engineer',
+  paragraph: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
+  // url: 'kfbc.herokuapp.com OR clairegilligan.com/kfbc',
+  github: 'https://github.com/feminaprovita/kfbc-website',
+  video: 'http://bit.ly/kfbc',
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk']
+}, {
+  name: 'Timelink Travel Services',
+  role: 'Fullstack Software Engineer',
+  paragraph: 'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+  bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
+  url: 'https://pm-grace-shopper.herokuapp.com',
+  github: 'https://github.com/pigMercury/grace-shopper',
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile']
+}];
+var schoolData = [{
+  fullName: 'Franciscan University of Steubenville',
+  shortName: 'Franciscan University',
+  url: 'https://www.franciscan.edu',
+  location: 'Steubenville, OH',
+  degree: 'B.A.',
+  major: 'Catechetics',
+  graduation: 2008,
+  thesis: 'Liturgical signs and symbols and the importance of understanding them for active participation',
+  advisor: 'James Pauley, M.A., S.T.D.',
+  detail: 'Great Books honors program. French minor. Semester in Gaming, Austria.'
+}, {
+  fullName: 'Liturgical Institute of the University of Saint Mary of the Lake',
+  shortName: 'Liturgical Institute',
+  url: 'https://www.liturgicalinstitute.org/',
+  location: 'Mundelein, IL',
+  degree: 'M.A.',
+  major: 'Liturgical Studies',
+  graduation: 2011,
+  thesis: 'The Ars Celebrandi of the Mystical Body: Applications for Postconciliar Liturgical Praxis',
+  advisor: 'Denis R. McNamara, M.Arch.H., Ph.D.',
+  detail: 'Graduated cum laude.'
+}, {
+  fullName: 'Grace Hopper Program at Fullstack Academy of Code',
+  shortName: 'Grace Hopper',
+  url: 'https://www.gracehopper.com',
+  location: 'New York, NY',
+  degree: 'Web Development Certification',
+  graduation: 2019
+}];
+var skillsByLevel = [{
+  level: 'irrelevant',
+  skills: ['Proofreading', 'Copyediting', 'French', 'Latin']
+}, {
+  level: 'proficient',
+  skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git/Github', 'Webpack/Babel', 'Agile', 'Visual Studio Code', 'Postman', 'Axios', 'Excel', 'Heroku']
+}, {
+  level: 'familiar',
+  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'JSON', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
+}];
+var skillsByType = {
+  languages: ['JavaScript/ES6', 'Python3', 'SQL'],
+  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
+  backend: ['Express', 'Sequelize', 'PostgreSQL'],
+  data: ['Puppeteer', 'RegEx'],
+  programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku', 'AWS'],
+  nontechnical: ['Agile', 'Excel', 'Copyediting', 'Proofreading', 'French', 'Latin']
+};
+module.exports = {
+  blogData: blogData,
+  jobData: jobData,
+  projectData: projectData,
+  schoolData: schoolData,
+  skillsByLevel: skillsByLevel,
+  skillsByType: skillsByType
+};
 
 /***/ }),
 
@@ -39486,7 +39669,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n#profile-container {\n  padding: 1vw;\n  margin: 3vw;\n  background: palegoldenrod;\n  border: 0.5px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n  /* border-radius: 15%; */\n}\n\n#profile-text {\n  padding: 4vw;\n  /* color: darkblue; */\n  text-align: center;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n  vertical-align: middle;\n}\n\n#nav-name {\n  text-decoration: wavy;\n  color: #6341a9;\n  text-shadow: 0.13em 0.11em #73b9fa;\n  font-size: 3em;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n  color: #6341a9;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* a:link {\n\n}\n\na:visited {\n\n} */\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 3em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n#profile-container {\n  padding: 1vw;\n  margin: 12vw 3vw;\n  background: palegoldenrod;\n  border: 0.5px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n", ""]);
 
 
 
