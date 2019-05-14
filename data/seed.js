@@ -199,11 +199,11 @@ const skillsByLevel = [{
 
 const skillsByType = {
   languages: ['JavaScript/ES6', 'Python3', 'SQL'],
-  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
+  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'CSS Grid', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
   backend: ['Express', 'Sequelize', 'PostgreSQL'],
-  data: ['Puppeteer', 'RegEx'],
+  data: ['Puppeteer', 'JSON', 'RegEx'],
   programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku', 'AWS'],
-  nontechnical: ['Agile', 'Excel', 'Copyediting', 'Proofreading', 'French', 'Latin']
+  nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'Latin', 'French', 'Excel']
 }
 
 

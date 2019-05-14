@@ -135,8 +135,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var Blog = function Blog() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "blog"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Blog Posts"), _data_blogUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (b) {
+    id: "blog-wrapper"
+  }, _data_blogUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (b) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "one-blog",
       key: b.keyName
@@ -265,7 +265,8 @@ var Navbar = function Navbar() {
     className: "navlink-one"
   }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing",
-    className: "navlink-one"
+    className: "navlink-one",
+    target: "blank"
   }, "Resum\xE9"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
 };
 
@@ -451,8 +452,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var Projects = function Projects() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "projects"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Projects"), _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (p) {
+    id: "project-wrapper"
+  }, _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (p) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: p.keyName,
       id: p.keyName
@@ -488,8 +489,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var Skills = function Skills() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "skills"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Skills"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "skill-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "skill-box",
@@ -514,15 +513,15 @@ var Skills = function Skills() {
     }, s);
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "skill-box",
-    id: "data-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Data"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].data.map(function (s, i) {
+    id: "program-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Programs/Services"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].programs.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "skill-box",
-    id: "program-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Programs/Services"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].programs.map(function (s, i) {
+    id: "data-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Data"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _data_seed__WEBPACK_IMPORTED_MODULE_1__["skillsByType"].data.map(function (s, i) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
@@ -533,7 +532,7 @@ var Skills = function Skills() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: i
     }, s);
-  })))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Skills);
@@ -943,11 +942,11 @@ var skillsByLevel = [{
 }];
 var skillsByType = {
   languages: ['JavaScript/ES6', 'Python3', 'SQL'],
-  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
+  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'CSS Grid', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
   backend: ['Express', 'Sequelize', 'PostgreSQL'],
-  data: ['Puppeteer', 'RegEx'],
+  data: ['Puppeteer', 'JSON', 'RegEx'],
   programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku', 'AWS'],
-  nontechnical: ['Agile', 'Excel', 'Copyediting', 'Proofreading', 'French', 'Latin']
+  nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'Latin', 'French', 'Excel']
 };
 module.exports = {
   blogData: blogData,
@@ -40004,7 +40003,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n  color: #6341a9;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* a:link {\n\n}\n\na:visited {\n\n} */\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 3em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n#profile-container {\n  padding: 1vw;\n  margin: 12vw 3vw;\n  background: palegoldenrod;\n  border: 0.5px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n#wrapper {\n  display: grid;\n  grid-template-columns: left-col auto mid-col auto rt-col auto;\n  grid-template-rows: top-row auto bot-row auto;\n  grid-template-areas:\n    'lang frontend backend'\n    'data programs nontech';\n  /* grid-template:\n    'lang frontend backend' auto\n    'data programs nontech' auto\n    / repeat(3, auto); */\n  grid-gap: 1rem;\n  place-items: start;\n  place-content: space-evenly;\n\n  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */\n}\n\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n    border: 5px dashed palegoldenrod;\n    border-radius: 15px;\n    padding: 1vw;\n  }\n\n#lang-box {\n    /* grid-area: lang / 1 / 1 / 1 / 1; */\n    grid-area: lang;\n    grid-row: 1 / 1;\n    grid-column: 1 / 1;\n\n  }\n\n  #frontend-box {\n    /* grid-area: frontend / 1 / 2 / 1 / 2; */\n    grid-area: frontend;\n    grid-row: 1 / 1;\n    grid-column: 2 / 2;\n  }\n\n  #backend-box {\n    /* grid-area: backend / 1 / 3 / 1 / 3; */\n    grid-area: backend;\n    grid-row: 1 / 1;\n    grid-column: 3 / 3;\n  }\n\n  #data-box {\n    /* grid-area: data / 2 / 1 / 2 / 1; */\n    grid-area: data;\n    grid-row: 2 / 2;\n    grid-column: 1 / 1;\n  }\n\n  #program-box {\n    /* grid-area: programs / 2 / 2 / 2 / 2; */\n    grid-area: programs;\n    grid-row: 2 / 2;\n    grid-column: 2 / 2;\n  }\n\n  #nontech-box {\n    /* grid-area: nontech / 2 / 3 / 2 / 3; */\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 0.5px dashed white;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 22vw;\n  max-height: 22vh;\n  flex-shrink: 1;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* a:link {\n}\n\na:visited {\n} */\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n#profile-container,\n#project-wrapper,\n#blog-wrapper,\n#skill-wrapper {\n  padding: 1vw;\n  margin: 12vw 3vw;\n}\n\n#profile-container {\n  background: palegoldenrod;\n  border: 1px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n#skill-wrapper {\n  display: grid;\n  grid-template:\n    'lang frontend backend' auto\n    'data programs nontech' auto\n    / repeat(3, auto);\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n#lang-box {\n  grid-area: lang / 1 / 1 / 1 / 1;\n  text-align: center;\n  }\n\n#frontend-box {\n  grid-area: frontend / 1 / 2 / 1 / 2;\n  text-align: center;\n}\n\n#backend-box {\n  grid-area: backend / 1 / 3 / 1 / 3;\n  text-align: center;\n}\n\n#program-box {\n  grid-area: programs / 2 / 2 / 2 / 2;\n  text-align: center;\n}\n\n#data-box {\n  grid-area: data / 2 / 1 / 2 / 1;\n  text-align: center;\n}\n\n#nontech-box {\n  /* grid-area: nontech / 2 / 3 / 2 / 3; */\n  grid-area: nontech;\n  grid-row: 2 / 2;\n  grid-column: 3 / 3;\n  text-align: center;\n}\n\n#project-wrapper > div {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n\n\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 22vw;\n  max-height: 22vh;\n  flex-shrink: 1;\n}\n", ""]);
 
 
 

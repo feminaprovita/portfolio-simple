@@ -5,8 +5,7 @@ import projectPosts from '../../data/projectsUpdate'
 import ProjectLinks from './ProjectLinks'
 
 const Projects = () => (
-  <div id='projects'>
-    <h1>Projects</h1>
+  <div id='project-wrapper'>
     {projectPosts.map(p => (
       <div key={p.keyName} id={p.keyName}>
       <h3>{p.name}</h3>
