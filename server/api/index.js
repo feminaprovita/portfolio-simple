@@ -1,7 +1,13 @@
 const router = require('express').Router()
 module.exports = router
 
-router.use('./', require('./main'))
+router.get('/', (req, res, next) => {
+  try {
+    res.send('../../public/bundle.js')
+    } catch (err) {
+    next(err)
+  }
+})
 
 router.use((req, res, next) => {
   const error = new Error('Not Found')
