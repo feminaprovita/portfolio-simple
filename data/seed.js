@@ -1,4 +1,19 @@
-const blogData = [{
+const blogData = [{ title: 'Things I Learned Building My Portfolio Site',
+postUrl:
+ 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+imageUrl:
+ 'https://cdn-images-1.medium.com/max/800/1*Nqg9mpO7gKfYH26Lj0LgLQ.jpeg',
+date: '2019-05-20',
+teaser:
+ 'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
+project: 'Portfolio Website',
+skills:
+ [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx' ],
+slug: 'things-i-learned-building-my-portfolio-site',
+keyName: 'things-i-learned-building-my-portfolio-site-component',
+imgAlt:
+ 'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20'
+}, {
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
   postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
@@ -73,14 +88,16 @@ const projectData = [
     name: 'Portfolio Website',
     role: 'Engineer',
     bullets: [
-      'Database-driven portfolio site with buttons that filter data into or out of render',
-      'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku',
-      'Used a combination of responsive design and media queries to style for desktop and mobile',
-      'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships',
+      'Built with Express, React, and Webpack',
+      'Styled with CSS Grid',
+      'Hosted on AWS S3',
+      'Previous build also used Heroku, Redux, Sequelize, and PostgreSQL'
+      // 'Used a combination of responsive design and media queries to style for desktop and mobile',
     ],
     // paragraph: '',
-    github: 'https://github.com/feminaprovita/cg-com',
-    skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS'],
+    github: 'https://github.com/feminaprovita/portfolio-simple',
+    blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+    skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
     priority: 1
   },
   {
@@ -89,7 +106,7 @@ const projectData = [
     paragraph:
     "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
     bullets: [
-      'User takes or uploads a selfie, and receives a unique Spotify playlist matching image’s mood',
+      'User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood',
       `Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search`
     ],
     url: 'https://my-moodify.herokuapp.com',
@@ -205,9 +222,6 @@ const skillsByType = {
   programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku', 'AWS'],
   nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'Latin', 'French', 'Excel']
 }
-
-
-
 
 module.exports = {
   blogData,

@@ -563,7 +563,9 @@ var Splash = function Splash() {
     alt: "Claire Gilligan profile picture"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "profile-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm certified for web development (full stack, JavaScript front and back end), but have been enjoying teaching myself Python so I have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767")));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm a new graduate of the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.gracehopper.com"
+  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -698,6 +700,17 @@ var Routes = function Routes() {
 /***/ (function(module, exports) {
 
 module.exports = [{
+  title: 'Things I Learned Building My Portfolio Site',
+  postUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  imageUrl: 'https://cdn-images-1.medium.com/max/800/1*Nqg9mpO7gKfYH26Lj0LgLQ.jpeg',
+  date: '2019-05-20',
+  teaser: 'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
+  project: 'Portfolio Website',
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
+  slug: 'things-i-learned-building-my-portfolio-site',
+  keyName: 'things-i-learned-building-my-portfolio-site-component',
+  imgAlt: 'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20'
+}, {
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
   postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
@@ -733,14 +746,15 @@ module.exports = [{
 module.exports = [{
   name: 'Portfolio Website',
   role: 'Engineer',
-  bullets: ['Database-driven portfolio site with buttons that filter data into or out of render', 'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku', 'Used a combination of responsive design and media queries to style for desktop and mobile', 'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships'],
-  github: 'https://github.com/feminaprovita/cg-com',
-  skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS'],
+  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on AWS S3', 'Previous build also used Heroku, Redux, Sequelize, and PostgreSQL'],
+  github: 'https://github.com/feminaprovita/portfolio-simple',
+  blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
   priority: 1,
   slug: 'portfolio-website',
   keyName: 'portfolio-website-component',
-  hold: ['https://github.com/feminaprovita/cg-com'],
-  links: 'https://github.com/feminaprovita/cg-com'
+  hold: ['https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae', 'https://github.com/feminaprovita/portfolio-simple'],
+  links: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae   ❦   https://github.com/feminaprovita/portfolio-simple'
 }, {
   name: 'Masks Google Plus Rescue',
   role: 'Engineer',
@@ -758,7 +772,7 @@ module.exports = [{
   name: 'Moodify',
   role: 'Fullstack Software Engineer',
   paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
-  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search"],
+  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search"],
   url: 'https://my-moodify.herokuapp.com',
   github: 'https://github.com/grape-emu/my-moodify',
   video: 'http://bit.ly/moodify-presentation',
@@ -806,6 +820,17 @@ module.exports = [{
 /***/ (function(module, exports) {
 
 var blogData = [{
+  title: 'Things I Learned Building My Portfolio Site',
+  postUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  imageUrl: 'https://cdn-images-1.medium.com/max/800/1*Nqg9mpO7gKfYH26Lj0LgLQ.jpeg',
+  date: '2019-05-20',
+  teaser: 'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
+  project: 'Portfolio Website',
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
+  slug: 'things-i-learned-building-my-portfolio-site',
+  keyName: 'things-i-learned-building-my-portfolio-site-component',
+  imgAlt: 'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20'
+}, {
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
   postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
@@ -856,16 +881,18 @@ var jobData = [{
 var projectData = [{
   name: 'Portfolio Website',
   role: 'Engineer',
-  bullets: ['Database-driven portfolio site with buttons that filter data into or out of render', 'Built with Node, Express, PostgreSQL, Sequelize, React, and Redux, and hosted on Heroku', 'Used a combination of responsive design and media queries to style for desktop and mobile', 'Planned expansions: CI/CD, meta-tagging for increased accessibility, individual pages for each component that showcase database relationships'],
+  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on AWS S3', 'Previous build also used Heroku, Redux, Sequelize, and PostgreSQL' // 'Used a combination of responsive design and media queries to style for desktop and mobile',
+  ],
   // paragraph: '',
-  github: 'https://github.com/feminaprovita/cg-com',
-  skills: ['js', 'node', 'express', 'sequelize', 'pg', 'react', 'redux', 'html', 'css', 'flexbox', 'git', 'webpack', 'vscode', 'heroku', 'chalk', 'axios', 'postman', 'regex', 'AWS'],
+  github: 'https://github.com/feminaprovita/portfolio-simple',
+  blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
   priority: 1
 }, {
   name: 'Moodify',
   role: 'Fullstack Software Engineer',
   paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
-  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify\u2019s search"],
+  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify\u2019s search"],
   url: 'https://my-moodify.herokuapp.com',
   github: 'https://github.com/grape-emu/my-moodify',
   video: 'http://bit.ly/moodify-presentation',
@@ -40003,7 +40030,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* a:link {\n}\n\na:visited {\n} */\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n#profile-container,\n#project-wrapper,\n#blog-wrapper,\n#skill-wrapper {\n  padding: 1vw;\n  margin: 12vw 3vw;\n}\n\n#profile-container {\n  background: palegoldenrod;\n  border: 1px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n#skill-wrapper {\n  display: grid;\n  grid-template:\n    'lang frontend backend' auto\n    'data programs nontech' auto\n    / repeat(3, auto);\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n#lang-box {\n  grid-area: lang / 1 / 1 / 1 / 1;\n  text-align: center;\n  }\n\n#frontend-box {\n  grid-area: frontend / 1 / 2 / 1 / 2;\n  text-align: center;\n}\n\n#backend-box {\n  grid-area: backend / 1 / 3 / 1 / 3;\n  text-align: center;\n}\n\n#program-box {\n  grid-area: programs / 2 / 2 / 2 / 2;\n  text-align: center;\n}\n\n#data-box {\n  grid-area: data / 2 / 1 / 2 / 1;\n  text-align: center;\n}\n\n#nontech-box {\n  /* grid-area: nontech / 2 / 3 / 2 / 3; */\n  grid-area: nontech;\n  grid-row: 2 / 2;\n  grid-column: 3 / 3;\n  text-align: center;\n}\n\n#project-wrapper > div {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n\n\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 22vw;\n  max-height: 22vh;\n  flex-shrink: 1;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n#profile-container,\n#project-wrapper,\n#blog-wrapper,\n#skill-wrapper {\n  padding: 1vw;\n  margin: 12vw 3vw;\n}\n\n#profile-container {\n  background: palegoldenrod;\n  border: 1px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n#skill-wrapper {\n  display: grid;\n  grid-template:\n    'lang frontend backend' auto\n    'data programs nontech' auto\n    / repeat(3, auto);\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n#lang-box {\n  grid-area: lang / 1 / 1 / 1 / 1;\n  text-align: center;\n  }\n\n#frontend-box {\n  grid-area: frontend / 1 / 2 / 1 / 2;\n  text-align: center;\n}\n\n#backend-box {\n  grid-area: backend / 1 / 3 / 1 / 3;\n  text-align: center;\n}\n\n#program-box {\n  grid-area: programs / 2 / 2 / 2 / 2;\n  text-align: center;\n}\n\n#data-box {\n  grid-area: data / 2 / 1 / 2 / 1;\n  text-align: center;\n}\n\n#nontech-box {\n  /* grid-area: nontech / 2 / 3 / 2 / 3; */\n  grid-area: nontech;\n  grid-row: 2 / 2;\n  grid-column: 3 / 3;\n  text-align: center;\n}\n\n#project-wrapper > div {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 110px;\n  max-height: 140px;\n  flex-shrink: 1;\n}\n", ""]);
 
 
 

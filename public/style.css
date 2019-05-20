@@ -13,12 +13,6 @@ a:hover {
   cursor: pointer;
 }
 
-/* a:link {
-}
-
-a:visited {
-} */
-
 nav {
   z-index: 2;
   position: fixed;
@@ -193,8 +187,6 @@ nav a:hover,
   margin: 0.5vw;
 }
 
-
-
 .one-blog {
   padding: 1vw;
   margin: 0.5vw;
@@ -207,7 +199,7 @@ nav a:hover,
 .blog-thumbnail {
   padding: 1vw;
   margin: 0.5vw;
-  max-width: 22vw;
-  max-height: 22vh;
+  max-width: 110px;
+  max-height: 140px;
   flex-shrink: 1;
 }

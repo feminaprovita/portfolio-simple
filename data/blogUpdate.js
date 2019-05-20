@@ -1,4 +1,30 @@
-module.exports =  [ { title:
+module.exports =  [ { title: 'Things I Learned Building My Portfolio Site',
+    postUrl:
+     'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+    imageUrl:
+     'https://cdn-images-1.medium.com/max/800/1*Nqg9mpO7gKfYH26Lj0LgLQ.jpeg',
+    date: '2019-05-20',
+    teaser:
+     'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
+    project: 'Portfolio Website',
+    skills:
+     [ 'js',
+       'node',
+       'express',
+       'react',
+       'html',
+       'css',
+       'grid',
+       'git',
+       'webpack',
+       'vscode',
+       'AWS',
+       'RegEx' ],
+    slug: 'things-i-learned-building-my-portfolio-site',
+    keyName: 'things-i-learned-building-my-portfolio-site-component',
+    imgAlt:
+     'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20' },
+  { title:
      'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
     postUrl:
      'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
