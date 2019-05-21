@@ -881,12 +881,12 @@ var jobData = [{
 var projectData = [{
   name: 'Portfolio Website',
   role: 'Engineer',
-  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on AWS S3', 'Previous build also used Heroku, Redux, Sequelize, and PostgreSQL' // 'Used a combination of responsive design and media queries to style for desktop and mobile',
+  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Previous build also used Redux, Sequelize, and PostgreSQL' // 'Used a combination of responsive design and media queries to style for desktop and mobile',
   ],
   // paragraph: '',
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex'],
   priority: 1
 }, {
   name: 'Moodify',

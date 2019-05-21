@@ -90,14 +90,13 @@ const projectData = [
     bullets: [
       'Built with Express, React, and Webpack',
       'Styled with CSS Grid',
-      'Hosted on AWS S3',
-      'Previous build also used Heroku, Redux, Sequelize, and PostgreSQL'
+      'Previous build also used Redux, Sequelize, and PostgreSQL'
       // 'Used a combination of responsive design and media queries to style for desktop and mobile',
     ],
     // paragraph: '',
     github: 'https://github.com/feminaprovita/portfolio-simple',
     blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-    skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
+    skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex'],
     priority: 1
   },
   {
