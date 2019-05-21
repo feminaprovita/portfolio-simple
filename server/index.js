@@ -1,6 +1,6 @@
 const express = require('express')
 const morgan = require('morgan')
-const PORT = 4004
+const PORT = process.env.PORT || 4004
 const path = require('path')
 const app = express()
 module.exports = app
