@@ -264,7 +264,7 @@ var Navbar = function Navbar() {
     to: "/Blog",
     className: "navlink-one"
   }, "Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://drive.google.com/file/d/155uSCwdNx99bCQXixeMV34wwrE5Mhql5/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1sStuBiJhYoZq5vRzqZFtGoyhzS-Bfi0J/view?usp=sharing",
     className: "navlink-one",
     target: "blank"
   }, "Resum\xE9"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
@@ -34457,7 +34457,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
