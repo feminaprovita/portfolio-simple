@@ -15,12 +15,15 @@ a:hover {
   position: static;
   display:  grid;
   grid-gap: 2rem;
-  grid-template:
+  /* grid-template:
     'header' auto
     'body' 90vh
     'footer' auto
-    / auto 1fr auto;
-}
+    / auto 1fr auto; */
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: [header] auto [body] 90vh [footer] auto;
+
+  }
 
 #grid-navbar {
   /* grid-area: header 1 / 1 / 1 / 1; */
