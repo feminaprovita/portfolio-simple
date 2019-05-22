@@ -86,9 +86,9 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./client/App.js":
+/***/ "./client/app.js":
 /*!***********************!*\
-  !*** ./client/App.js ***!
+  !*** ./client/app.js ***!
   \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -108,9 +108,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Router"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "whole-page"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Router"], {
     history: _history__WEBPACK_IMPORTED_MODULE_2__["default"]
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Navbar"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Footer"], null)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
+    id: "grid-navbar"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    id: "grid-body"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Footer"], {
+    id: "grid-footer"
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -139,6 +147,7 @@ var Blog = function Blog() {
   }, _data_blogUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (b) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "one-blog",
+      id: b.keyName,
       key: b.keyName
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: b.postUrl,
@@ -456,7 +465,8 @@ var Projects = function Projects() {
   }, _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (p) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: p.keyName,
-      id: p.keyName
+      id: p.keyName,
+      className: "one-project"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, p.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, p.role)), p.bullets && p.bullets.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, p.bullets.map(function (b, i) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: i
@@ -563,9 +573,9 @@ var Splash = function Splash() {
     alt: "Claire Gilligan profile picture"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "profile-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm a new graduate of the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm a new graduate of the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.gracehopper.com"
-  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\u2767 \u2767 \u2767")));
+  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC.")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -641,12 +651,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _public_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/style.css */ "./public/style.css");
 /* harmony import */ var _public_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_public_style_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./client/App.js");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app */ "./client/app.js");
 
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], null), document.getElementById('app'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_3__["default"], null), document.getElementById('app'));
 
 /***/ }),
 
@@ -969,11 +979,11 @@ var skillsByLevel = [{
 }];
 var skillsByType = {
   languages: ['JavaScript/ES6', 'Python3', 'SQL'],
-  frontend: ['React', 'Redux', 'HTML5', 'CSS3', 'CSS Grid', 'Flexbox', 'Bootstrap', 'Webpack/Babel'],
+  frontend: ['React', 'Redux', 'HTML5', 'CSS3, Grid, Flexbox', 'Webpack/Babel'],
   backend: ['Express', 'Sequelize', 'PostgreSQL'],
   data: ['Puppeteer', 'JSON', 'RegEx'],
-  programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku', 'AWS'],
-  nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'Latin', 'French', 'Excel']
+  programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku'],
+  nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'French', 'Excel']
 };
 module.exports = {
   blogData: blogData,
@@ -40051,7 +40061,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  margin-top: 98.58px;\n  margin-bottom: 10vh;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  /* background-color: #73b9fa; */\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  flex-grow: 1 1.5;\n  font-weight: bold;\n  margin: 0.4em;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n  flex-wrap: nowrap;\n}\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n#social-container {\n  display: block;\n  text-align: center;\n  height: 6vw;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n#profile-container,\n#project-wrapper,\n#blog-wrapper,\n#skill-wrapper {\n  padding: 1vw;\n  margin: 12vw 3vw;\n}\n\n#profile-container {\n  background: palegoldenrod;\n  border: 1px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n#skill-wrapper {\n  display: grid;\n  grid-template:\n    'lang frontend backend' auto\n    'data programs nontech' auto\n    / repeat(3, auto);\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n#lang-box {\n  grid-area: lang / 1 / 1 / 1 / 1;\n  text-align: center;\n  }\n\n#frontend-box {\n  grid-area: frontend / 1 / 2 / 1 / 2;\n  text-align: center;\n}\n\n#backend-box {\n  grid-area: backend / 1 / 3 / 1 / 3;\n  text-align: center;\n}\n\n#program-box {\n  grid-area: programs / 2 / 2 / 2 / 2;\n  text-align: center;\n}\n\n#data-box {\n  grid-area: data / 2 / 1 / 2 / 1;\n  text-align: center;\n}\n\n#nontech-box {\n  /* grid-area: nontech / 2 / 3 / 2 / 3; */\n  grid-area: nontech;\n  grid-row: 2 / 2;\n  grid-column: 3 / 3;\n  text-align: center;\n}\n\n#project-wrapper > div {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 110px;\n  max-height: 140px;\n  flex-shrink: 1;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n#whole-page {\n  position: static;\n  display:  grid;\n  grid-gap: 2rem;\n  /* grid-template:\n    'header' auto\n    'body' 90vh\n    'footer' auto\n    / auto 1fr auto; */\n  grid-template-columns: auto 1fr auto;\n  grid-template-rows: [header] auto [body] 90vh [footer] auto;\n\n  }\n\n#grid-navbar {\n  /* grid-area: header 1 / 1 / 1 / 1; */\n  grid-area: header;\n  grid-row: 1 / 1;\n  grid-column: 1 / 1;\n}\n\n#grid-body {\n  /* grid-area: body 2 / 1 / 2 / 1; */\n  grid-area: body;\n  grid-row: 2 / 2;\n  grid-column: 1 / 1;\n  position: absolute;\n}\n\n#grid-footer {\n  /* grid-area: footer 3 / 1 / 3 / 1; */\n  grid-area: footer;\n  grid-row: 3 / 3;\n  grid-column: 1 / 1;}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n@media (min-width: 40em) {\n  nav {\n    max-height: 87px;\n  }\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n@media (min-width: 40em) {\n  #navbar {\n    justify-content: space-between;\n  }\n}\n\n@media (max-width: 39em) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n@media (min-width: 40em) {\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n}\n\n@media (max-width: 39em) {\n  #nav-name {\n    flex-wrap: wrap;\n  }\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n/* FOOTER */\n#social-container {\n  display: block;\n  text-align: center;\n  height: 50px;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n@media (min-width: 40em) {\n  #profile-container {\n    flex-direction: row;\n  }\n}\n\n@media (max-width: 39em) {\n  #profile-container {\n    flex-direction: column;\n  }\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n@media(min-width: 1450px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 133px 3vw 6vw;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' auto\n      'data programs nontech' auto\n      / repeat(3, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n@media (min-width: 40em) and (max-width: 1449px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 13vw;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' auto\n      'data programs nontech' auto\n      / repeat(3, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n@media (min-width: 451px) and (max-width: 39em) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 13vw;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang frontend' auto\n    'backend data' auto\n    'programs nontech' auto\n    / repeat(2, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 2 / 1 / 2 / 1;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 3 / 1 / 3 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 3 / 3;\n    grid-column: 2 / 2;\n  }\n}\n\n@media (max-width: 450px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 17vw;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' auto\n    'frontend' auto\n    'backend' auto\n    'data' auto\n    'programs' auto\n    'nontech' auto\n    / repeat(1, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 2 / 1 / 2 / 1;\n  }\n  #backend-box {\n    grid-area: backend / 3 / 1 / 3 / 1;\n  }\n  #program-box {\n    grid-area: programs / 4 / 1 / 4 / 1;\n  }\n  #data-box {\n    grid-area: data / 5 / 1 / 5 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 6 / 6;\n    grid-column: 1 / 1;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n/* BLOG PAGE */\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1px dashed palegoldenrod;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 110px;\n  max-height: 140px;\n  flex-shrink: 1;\n}\n", ""]);
 
 
 
