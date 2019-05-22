@@ -207,7 +207,7 @@ nav a:hover,
 }
 
 .skill-box {
-  border: 1px dashed palegoldenrod;
+  /* border: 1px dashed palegoldenrod; */
   border-radius: 15px;
   padding: 1vw;
   text-align: center;
@@ -377,7 +377,7 @@ nav a:hover,
 }
 
 #project-wrapper > div {
-  border: 1px dashed palegoldenrod;
+  /* border: 1px dashed palegoldenrod; */
   border-radius: 15px;
   padding: 1vw;
   margin: 0.5vw;
@@ -387,7 +387,7 @@ nav a:hover,
 .one-blog {
   padding: 1vw;
   margin: 0.5vw;
-  border: 1px dashed palegoldenrod;
+  /* border: 1px dashed palegoldenrod; */
   border-radius: 15px;
   display: flex;
   align-items: center;
