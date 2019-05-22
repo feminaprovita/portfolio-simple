@@ -7,7 +7,7 @@ import ProjectLinks from './ProjectLinks'
 const Projects = () => (
   <div id='project-wrapper'>
     {projectPosts.map(p => (
-      <div key={p.keyName} id={p.keyName}>
+      <div key={p.keyName} id={p.keyName} className='one-project'>
       <h3>{p.name}</h3>
       <p><i>{p.role}</i></p>
       {p.bullets && p.bullets.length > 0 ? (

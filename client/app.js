@@ -6,11 +6,11 @@ import Routes from './routes'
 
 const App = () => {
   return (
-    <div>
+    <div id='whole-page'>
       <Router history={history}>
-        <Navbar />
-        <Routes />
-        <Footer />
+        <Navbar id='grid-navbar' />
+        <Routes id='grid-body'/>
+        <Footer id='grid-footer'/>
       </Router>
     </div>
   )
