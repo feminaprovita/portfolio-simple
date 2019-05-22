@@ -12,7 +12,7 @@ const Navbar = () => (
         <a href="https://drive.google.com/file/d/1sStuBiJhYoZq5vRzqZFtGoyhzS-Bfi0J/view?usp=sharing" className="navlink-one" target="blank">Resumé</a>
       </div>
     </div>
-    <hr />
+    {/* <hr /> */}
   </nav>
 )
 

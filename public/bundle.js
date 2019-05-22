@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "footer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "social-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "mailto:claire.gilligan.dev@gmail.com"
@@ -276,7 +276,7 @@ var Navbar = function Navbar() {
     href: "https://drive.google.com/file/d/1sStuBiJhYoZq5vRzqZFtGoyhzS-Bfi0J/view?usp=sharing",
     className: "navlink-one",
     target: "blank"
-  }, "Resum\xE9"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
+  }, "Resum\xE9"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
@@ -464,16 +464,30 @@ var Projects = function Projects() {
     id: "project-wrapper"
   }, _data_projectsUpdate__WEBPACK_IMPORTED_MODULE_1___default.a.map(function (p) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "one-project",
+      key: "one-project"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: p.keyName,
       id: p.keyName,
-      className: "one-project"
+      className: "project-info"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, p.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, p.role)), p.bullets && p.bullets.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, p.bullets.map(function (b, i) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: i
       }, b);
     })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, p.paragraph), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectLinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
       project: p
-    }));
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      id: p.imgAlt,
+      key: p.imgAlt,
+      className: "project-image-container"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: p.bestLink,
+      target: "blank"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "project-thumbnail",
+      src: p.imageUrl,
+      alt: p.imgAlt
+    }))));
   }));
 };
 
@@ -756,15 +770,16 @@ module.exports = [{
 module.exports = [{
   name: 'Portfolio Website',
   role: 'Engineer',
-  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on AWS S3', 'Previous build also used Heroku, Redux, Sequelize, and PostgreSQL'],
+  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on Heroku', 'Previous build also used Redux, Sequelize, and PostgreSQL'],
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
+  bestLink: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  imageUrl: 'https://i.imgur.com/J8HMNZQ.png',
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex'],
   priority: 1,
   slug: 'portfolio-website',
   keyName: 'portfolio-website-component',
-  hold: ['https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae', 'https://github.com/feminaprovita/portfolio-simple'],
-  links: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae   ❦   https://github.com/feminaprovita/portfolio-simple'
+  imgAlt: 'portfolio-website-thumbnail'
 }, {
   name: 'Masks Google Plus Rescue',
   role: 'Engineer',
@@ -772,12 +787,13 @@ module.exports = [{
   bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
   github: 'https://github.com/feminaprovita/masks-rescue',
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  bestLink: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
   skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
   priority: 2,
   slug: 'masks-google-plus-rescue',
   keyName: 'masks-google-plus-rescue-component',
-  hold: ['https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d', 'https://github.com/feminaprovita/masks-rescue'],
-  links: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d   ❦   https://github.com/feminaprovita/masks-rescue'
+  imgAlt: 'masks-google-plus-rescue-thumbnail'
 }, {
   name: 'Moodify',
   role: 'Fullstack Software Engineer',
@@ -786,12 +802,13 @@ module.exports = [{
   url: 'https://my-moodify.herokuapp.com',
   github: 'https://github.com/grape-emu/my-moodify',
   video: 'http://bit.ly/moodify-presentation',
+  bestLink: 'http://bit.ly/moodify-presentation',
+  imageUrl: 'https://i.imgur.com/Us7GTvX.png',
   skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
   priority: 3,
   slug: 'moodify',
   keyName: 'moodify-component',
-  hold: ['<a href=https://my-moodify.herokuapp.com target="blank">Website</a>', 'https://github.com/grape-emu/my-moodify', 'http://bit.ly/moodify-presentation'],
-  links: '<a href=https://my-moodify.herokuapp.com target="blank">Website</a>   ❦   https://github.com/grape-emu/my-moodify   ❦   http://bit.ly/moodify-presentation'
+  imgAlt: 'moodify-thumbnail'
 }, {
   name: 'Timelink Travel Services',
   role: 'Fullstack Software Engineer',
@@ -799,12 +816,13 @@ module.exports = [{
   bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
   url: 'https://pm-grace-shopper.herokuapp.com',
   github: 'https://github.com/pigMercury/grace-shopper',
+  bestLink: 'https://pm-grace-shopper.herokuapp.com',
+  imageUrl: 'https://i.imgur.com/RXzSb5q.png',
   skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
   priority: 4,
   slug: 'timelink-travel-services',
   keyName: 'timelink-travel-services-component',
-  hold: ['<a href=https://pm-grace-shopper.herokuapp.com target="blank">Website</a>', 'https://github.com/pigMercury/grace-shopper'],
-  links: '<a href=https://pm-grace-shopper.herokuapp.com target="blank">Website</a>   ❦   https://github.com/pigMercury/grace-shopper'
+  imgAlt: 'timelink-travel-services-thumbnail'
 }, {
   name: 'Keeping Facebook Cheerful',
   role: 'Solo Engineer',
@@ -812,12 +830,13 @@ module.exports = [{
   bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
   github: 'https://github.com/feminaprovita/kfbc-website',
   video: 'http://bit.ly/kfbc',
+  bestLink: 'http://bit.ly/kfbc',
+  imageUrl: 'https://i.imgur.com/WReoK7h.png',
   skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
   priority: 5,
   slug: 'keeping-facebook-cheerful',
   keyName: 'keeping-facebook-cheerful-component',
-  hold: ['https://github.com/feminaprovita/kfbc-website', 'http://bit.ly/kfbc'],
-  links: 'https://github.com/feminaprovita/kfbc-website   ❦   http://bit.ly/kfbc'
+  imgAlt: 'keeping-facebook-cheerful-thumbnail'
 }];
 
 /***/ }),
@@ -891,23 +910,16 @@ var jobData = [{
 var projectData = [{
   name: 'Portfolio Website',
   role: 'Engineer',
-  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Previous build also used Redux, Sequelize, and PostgreSQL' // 'Used a combination of responsive design and media queries to style for desktop and mobile',
-  ],
-  // paragraph: '',
+  bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on Heroku', 'Previous build also used Redux, Sequelize, and PostgreSQL'],
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  bestLink: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  imageUrl: 'https://i.imgur.com/J8HMNZQ.png',
   skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex'],
-  priority: 1
-}, {
-  name: 'Moodify',
-  role: 'Fullstack Software Engineer',
-  paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
-  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify\u2019s search"],
-  url: 'https://my-moodify.herokuapp.com',
-  github: 'https://github.com/grape-emu/my-moodify',
-  video: 'http://bit.ly/moodify-presentation',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
-  priority: 3
+  priority: 1,
+  slug: 'portfolio-website',
+  keyName: 'portfolio-website-component',
+  imgAlt: 'portfolio-website-thumbnail'
 }, {
   name: 'Masks Google Plus Rescue',
   role: 'Engineer',
@@ -915,18 +927,28 @@ var projectData = [{
   bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
   github: 'https://github.com/feminaprovita/masks-rescue',
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  bestLink: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
   skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
-  priority: 2
+  priority: 2,
+  slug: 'masks-google-plus-rescue',
+  keyName: 'masks-google-plus-rescue-component',
+  imgAlt: 'masks-google-plus-rescue-thumbnail'
 }, {
-  name: 'Keeping Facebook Cheerful',
-  role: 'Solo Engineer',
-  paragraph: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
-  bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
-  // url: 'kfbc.herokuapp.com OR clairegilligan.com/kfbc',
-  github: 'https://github.com/feminaprovita/kfbc-website',
-  video: 'http://bit.ly/kfbc',
-  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
-  priority: 5
+  name: 'Moodify',
+  role: 'Fullstack Software Engineer',
+  paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search"],
+  url: 'https://my-moodify.herokuapp.com',
+  github: 'https://github.com/grape-emu/my-moodify',
+  video: 'http://bit.ly/moodify-presentation',
+  bestLink: 'http://bit.ly/moodify-presentation',
+  imageUrl: 'https://i.imgur.com/Us7GTvX.png',
+  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
+  priority: 3,
+  slug: 'moodify',
+  keyName: 'moodify-component',
+  imgAlt: 'moodify-thumbnail'
 }, {
   name: 'Timelink Travel Services',
   role: 'Fullstack Software Engineer',
@@ -934,8 +956,27 @@ var projectData = [{
   bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
   url: 'https://pm-grace-shopper.herokuapp.com',
   github: 'https://github.com/pigMercury/grace-shopper',
+  bestLink: 'https://pm-grace-shopper.herokuapp.com',
+  imageUrl: 'https://i.imgur.com/RXzSb5q.png',
   skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
-  priority: 4
+  priority: 4,
+  slug: 'timelink-travel-services',
+  keyName: 'timelink-travel-services-component',
+  imgAlt: 'timelink-travel-services-thumbnail'
+}, {
+  name: 'Keeping Facebook Cheerful',
+  role: 'Solo Engineer',
+  paragraph: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
+  github: 'https://github.com/feminaprovita/kfbc-website',
+  video: 'http://bit.ly/kfbc',
+  bestLink: 'http://bit.ly/kfbc',
+  imageUrl: 'https://i.imgur.com/WReoK7h.png',
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
+  priority: 5,
+  slug: 'keeping-facebook-cheerful',
+  keyName: 'keeping-facebook-cheerful-component',
+  imgAlt: 'keeping-facebook-cheerful-thumbnail'
 }];
 var schoolData = [{
   fullName: 'Franciscan University of Steubenville',
@@ -40061,7 +40102,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n#whole-page {\n  position: static;\n  display:  grid;\n  grid-gap: 2rem;\n  /* grid-template:\n    'header' auto\n    'body' 90vh\n    'footer' auto\n    / auto 1fr auto; */\n  grid-template-columns: auto 1fr auto;\n  grid-template-rows: [header] auto [body] 90vh [footer] auto;\n\n  }\n\n#grid-navbar {\n  /* grid-area: header 1 / 1 / 1 / 1; */\n  grid-area: header;\n  grid-row: 1 / 1;\n  grid-column: 1 / 1;\n}\n\n#grid-body {\n  /* grid-area: body 2 / 1 / 2 / 1; */\n  grid-area: body;\n  grid-row: 2 / 2;\n  grid-column: 1 / 1;\n  position: absolute;\n}\n\n#grid-footer {\n  /* grid-area: footer 3 / 1 / 3 / 1; */\n  grid-area: footer;\n  grid-row: 3 / 3;\n  grid-column: 1 / 1;}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n@media (min-width: 40em) {\n  nav {\n    max-height: 87px;\n  }\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n@media (min-width: 40em) {\n  #navbar {\n    justify-content: space-between;\n  }\n}\n\n@media (max-width: 39em) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n@media (min-width: 40em) {\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n}\n\n@media (max-width: 39em) {\n  #nav-name {\n    flex-wrap: wrap;\n  }\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n/* FOOTER */\n#social-container {\n  display: block;\n  text-align: center;\n  height: 50px;\n}\n\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n@media (min-width: 40em) {\n  #profile-container {\n    flex-direction: row;\n  }\n}\n\n@media (max-width: 39em) {\n  #profile-container {\n    flex-direction: column;\n  }\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  /* border: 1px dashed palegoldenrod; */\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n@media(min-width: 1450px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 133px 3vw 6vw;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' auto\n      'data programs nontech' auto\n      / repeat(3, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n@media (min-width: 40em) and (max-width: 1449px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 13vw;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' auto\n      'data programs nontech' auto\n      / repeat(3, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n@media (min-width: 451px) and (max-width: 39em) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 13vw;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang frontend' auto\n    'backend data' auto\n    'programs nontech' auto\n    / repeat(2, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 2 / 1 / 2 / 1;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 3 / 1 / 3 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 3 / 3;\n    grid-column: 2 / 2;\n  }\n}\n\n@media (max-width: 450px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 17vw;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' auto\n    'frontend' auto\n    'backend' auto\n    'data' auto\n    'programs' auto\n    'nontech' auto\n    / repeat(1, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 2 / 1 / 2 / 1;\n  }\n  #backend-box {\n    grid-area: backend / 3 / 1 / 3 / 1;\n  }\n  #program-box {\n    grid-area: programs / 4 / 1 / 4 / 1;\n  }\n  #data-box {\n    grid-area: data / 5 / 1 / 5 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 6 / 6;\n    grid-column: 1 / 1;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  /* border: 1px dashed palegoldenrod; */\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n/* BLOG PAGE */\n.one-blog {\n  padding: 1vw;\n  margin: 0.5vw;\n  /* border: 1px dashed palegoldenrod; */\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.blog-thumbnail {\n  padding: 1vw;\n  margin: 0.5vw;\n  max-width: 110px;\n  max-height: 140px;\n  flex-shrink: 1;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n#whole-page {\n  position: static;\n  display:  grid;\n  grid-gap: 2rem;\n  grid-template-rows: [header] auto [body] auto [footer] 55px;\n  }\n\n#grid-navbar {\n  grid-area: header 1 / 1 / 1 / 1;\n}\n\n#grid-body {\n  grid-area: body 2 / 1 / 2 / 1;\n  position: absolute;\n}\n\n#grid-footer {\n  grid-area: footer 3 / 1 / 3 / 1;\n}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-bottom: 1px ridge darkslategray;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n.navlink-one {\n  padding: 0.5em;\n}\n\n/* FOOTER */\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #add8ff, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-top: 1px ridge darkslategray;\n  padding: 1vw;\n}\n\n#social-container {\n  display: block;\n  text-align: center;\n  height: 50px;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1.2px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/* WIDE SCREEN */\n@media(min-width: 1450px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 133px 3vw 6vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' auto\n      'data programs nontech' auto\n      / repeat(3, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n/* DESKTOP */\n@media (min-width: 601px) and (max-width: 1449px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 13vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' auto\n      'data programs nontech' auto\n      / repeat(3, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n/* TABLET */\n@media (min-width: 451px) and (max-width: 600px) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 13vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang frontend' auto\n    'backend data' auto\n    'programs nontech' auto\n    / repeat(2, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #backend-box {\n    grid-area: backend / 2 / 1 / 2 / 1;\n  }\n  #program-box {\n    grid-area: programs / 2 / 2 / 2 / 2;\n  }\n  #data-box {\n    grid-area: data / 3 / 1 / 3 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 3 / 3;\n    grid-column: 2 / 2;\n  }\n}\n\n/* MOBILE */\n@media (max-width: 450px) {\n  nav {\n    overflow-y: auto;\n  }\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 17vw;\n  }\n  #profile-container {\n    flex-direction: column;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' auto\n    'frontend' auto\n    'backend' auto\n    'data' auto\n    'programs' auto\n    'nontech' auto\n    / repeat(1, auto);\n  }\n  #lang-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #frontend-box {\n    grid-area: frontend / 2 / 1 / 2 / 1;\n  }\n  #backend-box {\n    grid-area: backend / 3 / 1 / 3 / 1;\n  }\n  #program-box {\n    grid-area: programs / 4 / 1 / 4 / 1;\n  }\n  #data-box {\n    grid-area: data / 5 / 1 / 5 / 1;\n  }\n  #nontech-box {\n    grid-area: nontech;\n    grid-row: 6 / 6;\n    grid-column: 1 / 1;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n/* BLOG PAGE */\n.one-blog,\n.one-project {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.one-project {\n  justify-content: space-between;\n}\n\n.blog-thumbnail,\n.project-thumbnail {\n  margin: 1.5vw;\n  max-width: 180px;\n  max-height: 140px;\n  flex-shrink: 1;\n  border: 0.5px solid black;\n}\n", ""]);
 
 
 

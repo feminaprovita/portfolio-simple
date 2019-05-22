@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => (
   <div id="footer">
-    <hr />
+    {/* <hr /> */}
     <div id="social-container">
       <span>
       <a href="mailto:claire.gilligan.dev@gmail.com">
