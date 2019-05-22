@@ -13,6 +13,7 @@ class ProjectLinks extends Component {
       <a href={p.blogUrl} target="blank">Blog Post
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;</p>
     ) : (<span />)}
+
     {p.url && p.blogUrl && p.github && !p.video ? (
       <p><a href={p.url} target="blank">Website
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
@@ -20,6 +21,7 @@ class ProjectLinks extends Component {
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.github} target="blank">Github</a></p>
     ) : (<span />)}
+
     {p.url && p.blogUrl && p.github && p.video ? (
       <p><a href={p.url} target="blank">Website
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
@@ -29,6 +31,7 @@ class ProjectLinks extends Component {
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {!p.url && p.blogUrl && p.github && p.video ? (
       <p><a href={p.blogUrl} target="blank">Blog Post
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
@@ -36,16 +39,19 @@ class ProjectLinks extends Component {
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {!p.url && p.blogUrl && p.github && !p.video ? (
       <p><a href={p.blogUrl} target="blank">Blog Post
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
       <a href={p.github} target="blank">Github</a></p>
     ) : (<span />)}
+
     {!p.url && p.blogUrl && !p.github && p.video ? (
       <p><a href={p.blogUrl} target="blank">Blog Post
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
       <a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {p.url && p.blogUrl && !p.github && p.video ? (
       <p><a href={p.blogUrl} target="blank">Blog Post
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
@@ -53,14 +59,17 @@ class ProjectLinks extends Component {
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {p.url && !p.blogUrl && !p.github && !p.video ? (
       <p><a href={p.url} target="blank">Website</a></p>
     ) : (<span />)}
+
     {p.url && !p.blogUrl && p.github && !p.video ? (
       <p><a href={p.url} target="blank">Website
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.github} target="blank">Github</a></p>
     ) : (<span />)}
+
     {p.url && !p.blogUrl && p.github && p.video ? (
       <p><a href={p.url} target="blank">Website
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
@@ -68,17 +77,21 @@ class ProjectLinks extends Component {
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {!p.url && !p.blogUrl && p.github && p.video ? (
       <p><a href={p.github} target="blank">Github
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
         <a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {!p.url && !p.blogUrl && p.github && !p.video ? (
       <p><a href={p.github} target="blank">Github</a></p>
     ) : (<span />)}
+
     {!p.url && !p.blogUrl && !p.github && p.video ? (
       <p><a href={p.video} target="blank">Video Presentation</a></p>
     ) : (<span />)}
+
     {p.url && !p.blogUrl && !p.github && p.video ? (
       <p><a href={p.url} target="blank">Website
         </a>&nbsp;&nbsp;&nbsp;❦&nbsp;&nbsp;&nbsp;
