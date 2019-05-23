@@ -1,24 +1,6 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* background: linear-gradient(to right, #B9DEFF, #dcccfd); */
   background: #C7E5FF;
-  position: static;
-  display:  grid;
-  grid-gap: 2rem;
-  grid-template-rows: [header] auto [body] auto [footer] 55px;
-}
-
-#grid-navbar {
-  grid-area: header 1 / 1 / 1 / 1;
-}
-
-#grid-body {
-  grid-area: body 2 / 1 / 2 / 1;
-  position: absolute;
-}
-
-#grid-footer {
-  grid-area: footer 3 / 1 / 3 / 1;
 }
 
 a {
@@ -167,7 +149,7 @@ nav a:hover,
 }
 
 /* WIDE SCREEN */
-@media(min-width: 1450px) {
+@media(min-width: 1475px) {
   #navbar {
     max-height: 87px;
     justify-content: space-between;
@@ -180,7 +162,7 @@ nav a:hover,
   #blog-wrapper,
   #skill-wrapper {
     padding: 1vw;
-    margin: 133px 3vw 3vw;
+    margin: 133px 3vw 9vw;
   }
   #profile-container {
     flex-direction: row;
@@ -214,7 +196,7 @@ nav a:hover,
 }
 
 /* DESKTOP */
-@media (min-width: 601px) and (max-width: 1449px) {
+@media (min-width: 601px) and (max-width: 1474px) {
   #navbar {
     max-height: 87px;
     justify-content: space-between;
@@ -227,7 +209,7 @@ nav a:hover,
   #blog-wrapper,
   #skill-wrapper {
     padding: 1vw;
-    margin: 100px 3vw 6vw;
+    margin: 100px 3vw 5vw;
   }
   #profile-container {
     flex-direction: row;
@@ -274,7 +256,7 @@ nav a:hover,
   #blog-wrapper,
   #skill-wrapper {
     padding: 1vw;
-    margin: 115px 3vw 3vw;
+    margin: 115px 3vw 9vw;
   }
   #profile-container {
     flex-direction: row;
@@ -306,6 +288,9 @@ nav a:hover,
     grid-row: 3 / 3;
     grid-column: 2 / 2;
   }
+  .one-project {
+    flex-direction: column-reverse;
+  }
 }
 
 /* MOBILE */
@@ -325,7 +310,7 @@ nav a:hover,
   #blog-wrapper,
   #skill-wrapper {
     padding: 1vw;
-    margin: 120px 3vw 3vw;
+    margin: 120px 3vw 9vw;
   }
   #profile-container {
     flex-direction: column;
@@ -360,6 +345,12 @@ nav a:hover,
     grid-row: 6 / 6;
     grid-column: 1 / 1;
   }
+  .one-project {
+    flex-direction: column-reverse;
+  }
+  .one-blog {
+    flex-direction: column;
+  }
 }
 
 /* PROJECTS PAGE */
@@ -380,7 +371,6 @@ nav a:hover,
 /* BLOG PAGE */
 .one-blog,
 .one-project {
-  padding: 1vw;
   margin: 0.5vw;
   border: 1.2px dashed #CA006D;
   border-radius: 15px;
@@ -388,8 +378,13 @@ nav a:hover,
   align-items: center;
 }
 
+.one-blog {
+  padding: 1vw;
+}
+
 .one-project {
   justify-content: space-between;
+  padding: 1vw 1vw 1vw 2vw;
 }
 
 .one-blog a h2,
@@ -403,5 +398,5 @@ nav a:hover,
   max-width: 180px;
   max-height: 140px;
   flex-shrink: 1;
-  border: 0.5px solid black;
+  border: 1px solid black;
 }

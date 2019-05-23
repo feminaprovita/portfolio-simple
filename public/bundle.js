@@ -774,7 +774,7 @@ module.exports = [{
   date: '2019-05-20',
   teaser: 'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
   project: 'Portfolio Website',
-  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'RegEx'],
   slug: 'things-i-learned-building-my-portfolio-site',
   keyName: 'things-i-learned-building-my-portfolio-site-component',
   imgAlt: 'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20'
@@ -786,7 +786,7 @@ module.exports = [{
   summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
   teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
   project: 'Masks Rescue',
-  skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git'],
+  skills: ['js', 'node', 'puppeteer', 'git'],
   slug: 'pair-programming-after-bootcamp',
   keyName: 'pair-programming-after-bootcamp-component',
   imgAlt: 'pair-programming-after-bootcamp-thumbnail-2019-03-12'
@@ -818,7 +818,7 @@ module.exports = [{
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
   bestLink: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-  imageUrl: 'https://i.imgur.com/MSeeALH.png',
+  imageUrl: 'https://i.imgur.com/lCRjxiE.png',
   skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex'],
   priority: 1,
   slug: 'portfolio-website',
@@ -833,7 +833,7 @@ module.exports = [{
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   bestLink: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
-  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
+  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'regex'],
   priority: 2,
   slug: 'masks-google-plus-rescue',
   keyName: 'masks-google-plus-rescue-component',
@@ -848,7 +848,7 @@ module.exports = [{
   video: 'http://bit.ly/moodify-presentation',
   bestLink: 'http://bit.ly/moodify-presentation',
   imageUrl: 'https://i.imgur.com/Us7GTvX.png',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
+  skills: ['js', 'node', 'express', 'axios', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
   priority: 3,
   slug: 'moodify',
   keyName: 'moodify-component',
@@ -862,7 +862,7 @@ module.exports = [{
   github: 'https://github.com/pigMercury/grace-shopper',
   bestLink: 'https://pm-grace-shopper.herokuapp.com',
   imageUrl: 'https://i.imgur.com/RXzSb5q.png',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
   priority: 4,
   slug: 'timelink-travel-services',
   keyName: 'timelink-travel-services-component',
@@ -875,7 +875,7 @@ module.exports = [{
   github: 'https://github.com/feminaprovita/kfbc-website',
   video: 'http://bit.ly/kfbc',
   bestLink: 'http://bit.ly/kfbc',
-  imageUrl: 'https://i.imgur.com/WReoK7h.png',
+  imageUrl: 'https://i.imgur.com/AXzQmn4.png',
   skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
   priority: 5,
   slug: 'keeping-facebook-cheerful',
@@ -899,10 +899,7 @@ var blogData = [{
   date: '2019-05-20',
   teaser: 'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
   project: 'Portfolio Website',
-  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx'],
-  slug: 'things-i-learned-building-my-portfolio-site',
-  keyName: 'things-i-learned-building-my-portfolio-site-component',
-  imgAlt: 'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20'
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'RegEx']
 }, {
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
   postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
@@ -911,20 +908,14 @@ var blogData = [{
   summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
   teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
   project: 'Masks Rescue',
-  skills: ['js', 'node', 'puppeteer', 'vscode', 'json', 'git'],
-  slug: 'pair-programming-after-bootcamp',
-  keyName: 'pair-programming-after-bootcamp-component',
-  imgAlt: 'pair-programming-after-bootcamp-thumbnail-2019-03-12'
+  skills: ['js', 'node', 'puppeteer', 'git']
 }, {
   title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
   postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
   imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
   date: '2019-01-28',
   teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
-  skills: ['js', 'node', 'git'],
-  slug: 'new-to-programming',
-  keyName: 'new-to-programming-component',
-  imgAlt: 'new-to-programming-thumbnail-2019-01-28'
+  skills: ['js', 'node', 'git']
 }];
 var jobData = [{
   jobTitle: 'Freelance Editorial Consultant',
@@ -958,12 +949,9 @@ var projectData = [{
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
   bestLink: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-  imageUrl: 'https://i.imgur.com/J8HMNZQ.png',
-  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex'],
-  priority: 1,
-  slug: 'portfolio-website',
-  keyName: 'portfolio-website-component',
-  imgAlt: 'portfolio-website-thumbnail'
+  imageUrl: 'https://i.imgur.com/lCRjxiE.png',
+  skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'regex'],
+  priority: 1
 }, {
   name: 'Masks Google Plus Rescue',
   role: 'Engineer',
@@ -973,11 +961,8 @@ var projectData = [{
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   bestLink: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
-  skills: ['js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex'],
-  priority: 2,
-  slug: 'masks-google-plus-rescue',
-  keyName: 'masks-google-plus-rescue-component',
-  imgAlt: 'masks-google-plus-rescue-thumbnail'
+  skills: ['js', 'node', 'git', 'puppeteer', 'regex'],
+  priority: 2
 }, {
   name: 'Moodify',
   role: 'Fullstack Software Engineer',
@@ -988,11 +973,8 @@ var projectData = [{
   video: 'http://bit.ly/moodify-presentation',
   bestLink: 'http://bit.ly/moodify-presentation',
   imageUrl: 'https://i.imgur.com/Us7GTvX.png',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile'],
-  priority: 3,
-  slug: 'moodify',
-  keyName: 'moodify-component',
-  imgAlt: 'moodify-thumbnail'
+  skills: ['js', 'node', 'express', 'axios', 'react', 'redux', 'css', 'git', 'webpack', 'heroku', 'agile'],
+  priority: 3
 }, {
   name: 'Timelink Travel Services',
   role: 'Fullstack Software Engineer',
@@ -1002,11 +984,8 @@ var projectData = [{
   github: 'https://github.com/pigMercury/grace-shopper',
   bestLink: 'https://pm-grace-shopper.herokuapp.com',
   imageUrl: 'https://i.imgur.com/RXzSb5q.png',
-  skills: ['js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile'],
-  priority: 4,
-  slug: 'timelink-travel-services',
-  keyName: 'timelink-travel-services-component',
-  imgAlt: 'timelink-travel-services-thumbnail'
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'heroku', 'agile'],
+  priority: 4
 }, {
   name: 'Keeping Facebook Cheerful',
   role: 'Solo Engineer',
@@ -1015,12 +994,9 @@ var projectData = [{
   github: 'https://github.com/feminaprovita/kfbc-website',
   video: 'http://bit.ly/kfbc',
   bestLink: 'http://bit.ly/kfbc',
-  imageUrl: 'https://i.imgur.com/WReoK7h.png',
-  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk'],
-  priority: 5,
-  slug: 'keeping-facebook-cheerful',
-  keyName: 'keeping-facebook-cheerful-component',
-  imgAlt: 'keeping-facebook-cheerful-thumbnail'
+  imageUrl: 'https://i.imgur.com/AXzQmn4.png',
+  skills: ['js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'heroku', 'puppeteer', 'chalk'],
+  priority: 5
 }];
 var schoolData = [{
   fullName: 'Franciscan University of Steubenville',
@@ -1057,17 +1033,17 @@ var skillsByLevel = [{
   skills: ['Proofreading', 'Copyediting', 'French', 'Latin']
 }, {
   level: 'proficient',
-  skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git/Github', 'Webpack/Babel', 'Agile', 'Visual Studio Code', 'Postman', 'Axios', 'Excel', 'Heroku']
+  skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git', 'Webpack/Babel', 'Agile', 'Axios', 'Excel', 'Heroku']
 }, {
   level: 'familiar',
-  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'JSON', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
+  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
 }];
 var skillsByType = {
   languages: ['JavaScript/ES6', 'Python3', 'SQL'],
   frontend: ['React', 'Redux', 'HTML5', 'CSS3, Grid, Flexbox', 'Webpack/Babel'],
   backend: ['Express', 'Sequelize', 'PostgreSQL'],
-  data: ['Puppeteer', 'JSON', 'RegEx'],
-  programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku'],
+  data: ['Puppeteer', 'RegEx'],
+  programs: ['Node', 'Git', 'Heroku'],
   nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'French', 'Excel']
 };
 module.exports = {
@@ -40146,7 +40122,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  /* background: linear-gradient(to right, #B9DEFF, #dcccfd); */\n  background: #C7E5FF;\n  position: static;\n  display:  grid;\n  grid-gap: 2rem;\n  grid-template-rows: [header] auto [body] auto [footer] 55px;\n}\n\n#grid-navbar {\n  grid-area: header 1 / 1 / 1 / 1;\n}\n\n#grid-body {\n  grid-area: body 2 / 1 / 2 / 1;\n  position: absolute;\n}\n\n#grid-footer {\n  grid-area: footer 3 / 1 / 3 / 1;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-bottom: 1px ridge darkslategray;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n.navlink-one {\n  padding: 0.5em;\n}\n\n/* FOOTER */\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-top: 1px ridge darkslategray;\n  padding: 0.3vw;\n}\n\n#social-container {\n  display: block;\n  text-align: center;\n  max-height: 50px;\n  padding: 0.5vh;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1.2px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/* WIDE SCREEN */\n@media(min-width: 1450px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 133px 3vw 3vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' 1fr\n      'data tools other' 1fr\n      / repeat(3, 1fr);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #Backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #Tools-box {\n    grid-area: tools / 2 / 2 / 2 / 2;\n  }\n  #Data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n/* DESKTOP */\n@media (min-width: 601px) and (max-width: 1449px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 6vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' 1fr\n      'data tools other' 1fr\n      / repeat(3, 1fr);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #Backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #Tools-box {\n    grid-area: tools / 2 / 2 / 2 / 2;\n  }\n  #Data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n/* TABLET */\n@media (min-width: 451px) and (max-width: 600px) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 3vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang frontend' auto\n    'backend data' auto\n    'tools other' auto\n    / repeat(2, auto);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #Backend-box {\n    grid-area: backend / 2 / 1 / 2 / 1;\n  }\n  #Tools-box {\n    grid-area: tools / 2 / 2 / 2 / 2;\n  }\n  #Data-box {\n    grid-area: data / 3 / 1 / 3 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 3 / 3;\n    grid-column: 2 / 2;\n  }\n}\n\n/* MOBILE */\n@media (max-width: 450px) {\n  nav {\n    overflow-y: auto;\n  }\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 3vw;\n  }\n  #profile-container {\n    flex-direction: column;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' 1fr\n    'frontend' 1fr\n    'backend' 1fr\n    'data' 1fr\n    'tools' 1fr\n    'other' 1fr\n    / repeat(1, 1fr);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 2 / 1 / 2 / 1;\n  }\n  #Backend-box {\n    grid-area: backend / 3 / 1 / 3 / 1;\n  }\n  #Tools-box {\n    grid-area: tools / 4 / 1 / 4 / 1;\n  }\n  #Data-box {\n    grid-area: data / 5 / 1 / 5 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 6 / 6;\n    grid-column: 1 / 1;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n/* BLOG PAGE */\n.one-blog,\n.one-project {\n  padding: 1vw;\n  margin: 0.5vw;\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.one-project {\n  justify-content: space-between;\n}\n\n.one-blog a h2,\n.one-project a {\n  color: black\n}\n\n.blog-thumbnail,\n.project-thumbnail {\n  margin: 1.5vw;\n  max-width: 180px;\n  max-height: 140px;\n  flex-shrink: 1;\n  border: 0.5px solid black;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: #C7E5FF;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-bottom: 1px ridge darkslategray;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n.navlink-one {\n  padding: 0.5em;\n}\n\n/* FOOTER */\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-top: 1px ridge darkslategray;\n  padding: 0.3vw;\n}\n\n#social-container {\n  display: block;\n  text-align: center;\n  max-height: 50px;\n  padding: 0.5vh;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1.2px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/* WIDE SCREEN */\n@media(min-width: 1475px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 133px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' 1fr\n      'data tools other' 1fr\n      / repeat(3, 1fr);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #Backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #Tools-box {\n    grid-area: tools / 2 / 2 / 2 / 2;\n  }\n  #Data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n/* DESKTOP */\n@media (min-width: 601px) and (max-width: 1474px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 5vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n      'lang frontend backend' 1fr\n      'data tools other' 1fr\n      / repeat(3, 1fr);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #Backend-box {\n    grid-area: backend / 1 / 3 / 1 / 3;\n  }\n  #Tools-box {\n    grid-area: tools / 2 / 2 / 2 / 2;\n  }\n  #Data-box {\n    grid-area: data / 2 / 1 / 2 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 2 / 2;\n    grid-column: 3 / 3;\n  }\n}\n\n/* TABLET */\n@media (min-width: 451px) and (max-width: 600px) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang frontend' auto\n    'backend data' auto\n    'tools other' auto\n    / repeat(2, auto);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 1 / 2 / 1 / 2;\n  }\n  #Backend-box {\n    grid-area: backend / 2 / 1 / 2 / 1;\n  }\n  #Tools-box {\n    grid-area: tools / 2 / 2 / 2 / 2;\n  }\n  #Data-box {\n    grid-area: data / 3 / 1 / 3 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 3 / 3;\n    grid-column: 2 / 2;\n  }\n  .one-project {\n    flex-direction: column-reverse;\n  }\n}\n\n/* MOBILE */\n@media (max-width: 450px) {\n  nav {\n    overflow-y: auto;\n  }\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: column;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' 1fr\n    'frontend' 1fr\n    'backend' 1fr\n    'data' 1fr\n    'tools' 1fr\n    'other' 1fr\n    / repeat(1, 1fr);\n  }\n  #Languages-box {\n    grid-area: lang / 1 / 1 / 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend / 2 / 1 / 2 / 1;\n  }\n  #Backend-box {\n    grid-area: backend / 3 / 1 / 3 / 1;\n  }\n  #Tools-box {\n    grid-area: tools / 4 / 1 / 4 / 1;\n  }\n  #Data-box {\n    grid-area: data / 5 / 1 / 5 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 6 / 6;\n    grid-column: 1 / 1;\n  }\n  .one-project {\n    flex-direction: column-reverse;\n  }\n  .one-blog {\n    flex-direction: column;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n/* BLOG PAGE */\n.one-blog,\n.one-project {\n  margin: 0.5vw;\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.one-blog {\n  padding: 1vw;\n}\n\n.one-project {\n  justify-content: space-between;\n  padding: 1vw 1vw 1vw 2vw;\n}\n\n.one-blog a h2,\n.one-project a {\n  color: black\n}\n\n.blog-thumbnail,\n.project-thumbnail {\n  margin: 1.5vw;\n  max-width: 180px;\n  max-height: 140px;\n  flex-shrink: 1;\n  border: 1px solid black;\n}\n", ""]);
 
 
 

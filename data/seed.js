@@ -9,11 +9,7 @@ const blogData = [{
   'After nearly two months of working on my portfolio site, here are my takeaways. Maybe you can glean something valuable from my mistakes.',
   project: 'Portfolio Website',
   skills:
-  [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'AWS', 'RegEx' ],
-  slug: 'things-i-learned-building-my-portfolio-site',
-  keyName: 'things-i-learned-building-my-portfolio-site-component',
-  imgAlt:
-  'things-i-learned-building-my-portfolio-site-thumbnail-2019-05-20'
+  [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'RegEx' ]
 }, {
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
   postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
@@ -22,20 +18,14 @@ const blogData = [{
   summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
   teaser: 'It was just a couple days before my bootcamp graduation when the other developer in my roleplaying group mentioned a side project on his radar...',
   project: 'Masks Rescue',
-  skills: [ 'js', 'node', 'puppeteer', 'vscode', 'json', 'git' ],
-  slug: 'pair-programming-after-bootcamp',
-  keyName: 'pair-programming-after-bootcamp-component',
-  imgAlt: 'pair-programming-after-bootcamp-thumbnail-2019-03-12'
+  skills: [ 'js', 'node', 'puppeteer', 'git' ]
 }, {
   title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
   postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
   imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
   date: '2019-01-28',
   teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
-  skills: [ 'js', 'node', 'git' ],
-  slug: 'new-to-programming',
-  keyName: 'new-to-programming-component',
-  imgAlt: 'new-to-programming-thumbnail-2019-01-28'
+  skills: [ 'js', 'node', 'git' ]
 }]
 
 
@@ -95,13 +85,10 @@ const projectData = [{
     'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
   bestLink:
     'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-  imageUrl: 'https://i.imgur.com/J8HMNZQ.png',
+  imageUrl: 'https://i.imgur.com/lCRjxiE.png',
   skills:
-    [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex' ],
-  priority: 1,
-  slug: 'portfolio-website',
-  keyName: 'portfolio-website-component',
-  imgAlt: 'portfolio-website-thumbnail'
+    [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'regex' ],
+  priority: 1
 }, {
   name: 'Masks Google Plus Rescue',
   role: 'Engineer',
@@ -117,11 +104,8 @@ const projectData = [{
     'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
   skills:
-    [ 'js', 'node', 'git', 'puppeteer', 'vscode', 'json', 'regex' ],
-  priority: 2,
-  slug: 'masks-google-plus-rescue',
-  keyName: 'masks-google-plus-rescue-component',
-  imgAlt: 'masks-google-plus-rescue-thumbnail'
+    [ 'js', 'node', 'git', 'puppeteer', 'regex' ],
+  priority: 2
 }, {
   name: 'Moodify',
   role: 'Fullstack Software Engineer',
@@ -136,11 +120,8 @@ const projectData = [{
   bestLink: 'http://bit.ly/moodify-presentation',
   imageUrl: 'https://i.imgur.com/Us7GTvX.png',
   skills:
-    [ 'js', 'node', 'express', 'axios', 'postman', 'react', 'redux', 'css', 'git', 'webpack', 'vscode', 'heroku', 'agile' ],
-  priority: 3,
-  slug: 'moodify',
-  keyName: 'moodify-component',
-  imgAlt: 'moodify-thumbnail'
+    [ 'js', 'node', 'express', 'axios', 'react', 'redux', 'css', 'git', 'webpack', 'heroku', 'agile' ],
+  priority: 3
 }, {
   name: 'Timelink Travel Services',
   role: 'Fullstack Software Engineer',
@@ -156,11 +137,8 @@ const projectData = [{
   bestLink: 'https://pm-grace-shopper.herokuapp.com',
   imageUrl: 'https://i.imgur.com/RXzSb5q.png',
   skills:
-    [ 'js', 'node', 'express', 'axios', 'postman', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'vscode', 'heroku', 'agile' ],
-  priority: 4,
-  slug: 'timelink-travel-services',
-  keyName: 'timelink-travel-services-component',
-  imgAlt: 'timelink-travel-services-thumbnail'
+    [ 'js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'webpack', 'postgres', 'heroku', 'agile' ],
+  priority: 4
 }, {
   name: 'Keeping Facebook Cheerful',
   role: 'Solo Engineer',
@@ -174,13 +152,10 @@ const projectData = [{
   github: 'https://github.com/feminaprovita/kfbc-website',
   video: 'http://bit.ly/kfbc',
   bestLink: 'http://bit.ly/kfbc',
-  imageUrl: 'https://i.imgur.com/WReoK7h.png',
+  imageUrl: 'https://i.imgur.com/AXzQmn4.png',
   skills:
-    [ 'js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'vscode', 'heroku', 'puppeteer', 'chalk' ],
-  priority: 5,
-  slug: 'keeping-facebook-cheerful',
-  keyName: 'keeping-facebook-cheerful-component',
-  imgAlt: 'keeping-facebook-cheerful-thumbnail'
+    [ 'js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'heroku', 'puppeteer', 'chalk' ],
+  priority: 5
 }]
 
 
@@ -228,18 +203,18 @@ const skillsByLevel = [{
   skills: ['Proofreading', 'Copyediting', 'French', 'Latin']
 }, {
   level: 'proficient',
-  skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git/Github', 'Webpack/Babel', 'Agile', 'Visual Studio Code', 'Postman', 'Axios', 'Excel', 'Heroku']
+  skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git', 'Webpack/Babel', 'Agile', 'Axios', 'Excel', 'Heroku']
 }, {
   level: 'familiar',
-  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'JSON', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
+  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
 }]
 
 const skillsByType = {
   languages: ['JavaScript/ES6', 'Python3', 'SQL'],
   frontend: ['React', 'Redux', 'HTML5', 'CSS3, Grid, Flexbox', 'Webpack/Babel'],
   backend: ['Express', 'Sequelize', 'PostgreSQL'],
-  data: ['Puppeteer', 'JSON', 'RegEx'],
-  programs: ['Node', 'Git/Github', 'Visual Studio Code', 'Postman', 'Heroku'],
+  data: ['Puppeteer', 'RegEx'],
+  programs: ['Node', 'Git', 'Heroku'],
   nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'French', 'Excel']
 }
 
