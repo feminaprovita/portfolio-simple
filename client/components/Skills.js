@@ -7,9 +7,9 @@ const Skills = () => (
     <SkillList heading="Languages" skills={skillsByType.languages} />
     <SkillList heading="Frontend" skills={skillsByType.frontend} />
     <SkillList heading="Backend" skills={skillsByType.backend} />
-    <SkillList heading="Programs/Services" skills={skillsByType.programs} />
+    <SkillList heading="Tools" skills={skillsByType.programs} />
     <SkillList heading="Data" skills={skillsByType.data} />
-    <SkillList heading="Non-Technical" skills={skillsByType.nontechnical} />
+    <SkillList heading="Other" skills={skillsByType.nontechnical} />
   </div>
 );
 

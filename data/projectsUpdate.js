@@ -11,7 +11,7 @@ module.exports = [{
     'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
   bestLink:
     'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
-  imageUrl: 'https://i.imgur.com/J8HMNZQ.png',
+  imageUrl: 'https://i.imgur.com/MSeeALH.png',
   skills:
     [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'vscode', 'heroku', 'regex' ],
   priority: 1,
