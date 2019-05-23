@@ -206,16 +206,15 @@ const skillsByLevel = [{
   skills: ['JavaScript/ES6', 'Node', 'Express', 'Sequelize', 'React', 'Redux', 'HTML5', 'Flexbox', 'Git', 'Webpack/Babel', 'Agile', 'Axios', 'Excel', 'Heroku']
 }, {
   level: 'familiar',
-  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'Bootstrap', 'Puppeteer', 'Python3', 'AWS', 'RegEx']
+  skills: ['PostgreSQL', 'CSS3', 'Waffle', 'Bootstrap', 'Puppeteer', 'Python', 'RegEx']
 }]
 
 const skillsByType = {
-  languages: ['JavaScript/ES6', 'Python3', 'SQL'],
+  languages: ['JavaScript/ES6', 'Python', 'SQL'],
   frontend: ['React', 'Redux', 'HTML5', 'CSS3, Grid, Flexbox', 'Webpack/Babel'],
-  backend: ['Express', 'Sequelize', 'PostgreSQL'],
-  data: ['Puppeteer', 'RegEx'],
-  programs: ['Node', 'Git', 'Heroku'],
-  nontechnical: ['Agile', 'Copyediting', 'Proofreading', 'French', 'Excel']
+  backend: ['Node', 'Express', 'Sequelize', 'PostgreSQL', 'Heroku'],
+  tools: ['Git', 'Puppeteer', 'Excel', 'RegEx'],
+  other: ['Agile', 'Copyediting', 'Proofreading', 'French']
 }
 
 module.exports = {

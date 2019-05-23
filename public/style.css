@@ -150,13 +150,6 @@ nav a:hover,
 
 /* WIDE SCREEN */
 @media(min-width: 1475px) {
-  #navbar {
-    max-height: 87px;
-    justify-content: space-between;
-  }
-  #nav-name {
-    flex-wrap: nowrap;
-  }
   #profile-container,
   #project-wrapper,
   #blog-wrapper,
@@ -164,39 +157,21 @@ nav a:hover,
     padding: 1vw;
     margin: 133px 3vw 9vw;
   }
-  #profile-container {
-    flex-direction: row;
-  }
-  #skill-wrapper{
-    grid-template:
-      'lang frontend backend' 1fr
-      'data tools other' 1fr
-      / repeat(3, 1fr);
-  }
-  #Languages-box {
-    grid-area: lang / 1 / 1 / 1 / 1;
-  }
-  #Frontend-box {
-    grid-area: frontend / 1 / 2 / 1 / 2;
-  }
-  #Backend-box {
-    grid-area: backend / 1 / 3 / 1 / 3;
-  }
-  #Tools-box {
-    grid-area: tools / 2 / 2 / 2 / 2;
-  }
-  #Data-box {
-    grid-area: data / 2 / 1 / 2 / 1;
-  }
-  #Other-box {
-    grid-area: other;
-    grid-row: 2 / 2;
-    grid-column: 3 / 3;
+}
+
+/* NORMAL SCREEN */
+@media (min-width: 601px) and (max-width: 1474px) {
+  #profile-container,
+  #project-wrapper,
+  #blog-wrapper,
+  #skill-wrapper {
+    padding: 1vw;
+    margin: 100px 3vw 5vw;
   }
 }
 
 /* DESKTOP */
-@media (min-width: 601px) and (max-width: 1474px) {
+@media (min-width: 601px) {
   #navbar {
     max-height: 87px;
     justify-content: space-between;
@@ -215,30 +190,36 @@ nav a:hover,
     flex-direction: row;
   }
   #skill-wrapper{
-    grid-template:
-      'lang frontend backend' 1fr
-      'data tools other' 1fr
-      / repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    'lang lang frontend frontend backend backend'
+    '. tools tools other other .'
   }
   #Languages-box {
-    grid-area: lang / 1 / 1 / 1 / 1;
+    grid-area: lang;
+    grid-row:  1 / 1;
+    grid-column: 1 / 3;
   }
   #Frontend-box {
-    grid-area: frontend / 1 / 2 / 1 / 2;
+    grid-area: frontend;
+    grid-row:  1 / 1;
+    grid-column: 3 / 5;
   }
   #Backend-box {
-    grid-area: backend / 1 / 3 / 1 / 3;
+    grid-area: backend;
+    grid-row:  1 / 1;
+    grid-column: 5 / 7;
   }
   #Tools-box {
-    grid-area: tools / 2 / 2 / 2 / 2;
-  }
-  #Data-box {
-    grid-area: data / 2 / 1 / 2 / 1;
+    grid-area: tools;
+    grid-row:  2 / 2;
+    grid-column: 2 / 4;
   }
   #Other-box {
     grid-area: other;
     grid-row: 2 / 2;
-    grid-column: 3 / 3;
+    grid-column: 4 / 6;
   }
 }
 
@@ -262,31 +243,37 @@ nav a:hover,
     flex-direction: row;
   }
   #skill-wrapper{
-    grid-template:
-    'lang frontend' auto
-    'backend data' auto
-    'tools other' auto
-    / repeat(2, auto);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    'lang lang frontend frontend'
+    'backend backend tools tools'
+    '. other other .'
   }
   #Languages-box {
-    grid-area: lang / 1 / 1 / 1 / 1;
+    grid-area: lang;
+    grid-row:  1 / 1;
+    grid-column: 1 / 3;
   }
   #Frontend-box {
-    grid-area: frontend / 1 / 2 / 1 / 2;
+    grid-area: frontend;
+    grid-row:  1 / 1;
+    grid-column: 3 / 5;
   }
   #Backend-box {
-    grid-area: backend / 2 / 1 / 2 / 1;
+    grid-area: backend;
+    grid-row:  2 / 2;
+    grid-column: 1 / 3;
   }
   #Tools-box {
-    grid-area: tools / 2 / 2 / 2 / 2;
-  }
-  #Data-box {
-    grid-area: data / 3 / 1 / 3 / 1;
+    grid-area: tools;
+    grid-row:  2 / 2;
+    grid-column: 3 / 5;
   }
   #Other-box {
     grid-area: other;
     grid-row: 3 / 3;
-    grid-column: 2 / 2;
+    grid-column: 2 / 4;
   }
   .one-project {
     flex-direction: column-reverse;
@@ -320,30 +307,38 @@ nav a:hover,
     'lang' 1fr
     'frontend' 1fr
     'backend' 1fr
-    'data' 1fr
     'tools' 1fr
     'other' 1fr
-    / repeat(1, 1fr);
+    / repeat(5, 1fr);
+  }
+  .skill-box {
+    padding-bottom: 1em;
   }
   #Languages-box {
-    grid-area: lang / 1 / 1 / 1 / 1;
+    grid-area: lang;
+    grid-row:  1 / 1;
+    grid-column: 1 / 1;
   }
   #Frontend-box {
-    grid-area: frontend / 2 / 1 / 2 / 1;
+    grid-area: frontend;
+    grid-row:  2 / 2;
+    grid-column: 1 / 1;
   }
   #Backend-box {
-    grid-area: backend / 3 / 1 / 3 / 1;
+    grid-area: backend;
+    grid-row:  3 / 3;
+    grid-column: 1 / 1;
   }
   #Tools-box {
-    grid-area: tools / 4 / 1 / 4 / 1;
-  }
-  #Data-box {
-    grid-area: data / 5 / 1 / 5 / 1;
+    grid-area: tools;
+    grid-row:  4 / 4;
+    grid-column: 1 / 1;
   }
   #Other-box {
     grid-area: other;
-    grid-row: 6 / 6;
+    grid-row: 5 / 5;
     grid-column: 1 / 1;
+    margin-bottom: 2vh;
   }
   .one-project {
     flex-direction: column-reverse;
