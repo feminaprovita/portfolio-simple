@@ -1,7 +1,7 @@
 const blogData = [{
   title: 'Things I Learned Building My Portfolio Site',
   postUrl:
-  'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
+  'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae?source=friends_link&sk=3d5684ab10c6f127a942352beb24299b',
   imageUrl:
   'https://cdn-images-1.medium.com/max/800/1*Nqg9mpO7gKfYH26Lj0LgLQ.jpeg',
   date: '2019-05-20',
@@ -12,7 +12,7 @@ const blogData = [{
   [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'RegEx' ]
 }, {
   title: 'Pair Programming after Bootcamp: Unintentionally a Great Learning Experience',
-  postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
+  postUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d?source=friends_link&sk=6e3a26bebd0e3973ca5b6cf901bdb3a7',
   imageUrl: 'https://i.imgur.com/cmVXobL.jpg',
   date: '2019-03-12',
   summary: 'In which I learn that 1) pair programming with an experienced developer is a pretty different experience from pair programming with a peer who knows about as little as I do, and also that 2) I actually *can* pair program with an experienced developer and not be a waste of space but make actual, worthwhile contributions.',
@@ -21,7 +21,7 @@ const blogData = [{
   skills: [ 'js', 'node', 'puppeteer', 'git' ]
 }, {
   title: 'New to Programming? Here’s How to Better Parse the Results from Googling Your Error Messages',
-  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4',
+  postUrl: 'https://medium.com/@feminaprovita/new-to-programming-heres-how-to-better-parse-the-results-from-googling-your-error-messages-8c9b0081fef4?source=friends_link&sk=52b56dafe2f2cd51c0447cc0d811539b',
   imageUrl: 'https://i.imgur.com/jhxCzGv.jpg',
   date: '2019-01-28',
   teaser: 'So you’ve written a function/program/website, and it doesn’t work. Hopefully it’s giving you an error message somewhere...',
