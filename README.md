@@ -1,7 +1,7 @@
 # Claire Gilligan portfolio website
 
-After spending a number of weeks on the [previous iteration](https://clairegilligan.herokuapp.com){target="_blank"}
-of my website, I [realized that](https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae?source=friends_link&sk=3d5684ab10c6f127a942352beb24299b){target="_blank"},
+After spending a number of weeks on the <a href="https://clairegilligan.herokuapp.com"
+target="blank">previous iteration</a>of my website, I [realized that](https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae?source=friends_link&sk=3d5684ab10c6f127a942352beb24299b){target="_blank"},
 for a portfolio site, I needed something tighter, simpler, more standard.
 
 Having built this twice, essentially, I've gotten two pretty different learning
