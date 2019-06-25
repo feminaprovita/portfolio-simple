@@ -191,48 +191,54 @@ var Footer = function Footer() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "social-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "mailto:claire.gilligan.dev@gmail.com"
+    href: "mailto:claire.gilligan.dev@gmail.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/email-icon.png",
     className: "social-links",
-    alt: "Email icon",
-    target: "blank"
+    alt: "Email icon"
   })), "\xA0\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.linkedin.com/in/claire-gilligan/"
+    href: "https://www.linkedin.com/in/claire-gilligan/",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/linkedin-icon.svg",
     className: "social-links",
-    alt: "LinkedIn icon",
-    target: "blank"
+    alt: "LinkedIn icon"
   })), "\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/feminaprovita/"
+    href: "https://github.com/feminaprovita/",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/github-icon.png",
     className: "social-links",
-    alt: "Github icon",
-    target: "blank"
+    alt: "Github icon"
   })), "\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://medium.com/@feminaprovita"
+    href: "https://medium.com/@feminaprovita",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/medium-icon.png",
     className: "social-links",
-    alt: "Medium icon",
-    target: "blank"
+    alt: "Medium icon"
   })), "\xA0\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.facebook.com/feminaprovita/"
+    href: "https://www.facebook.com/feminaprovita/",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/facebook-icon.png",
     className: "social-links",
-    alt: "Facebook icon",
-    target: "blank"
+    alt: "Facebook icon"
   })), "\xA0\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://twitter.com/feminaprovita/"
+    href: "https://twitter.com/feminaprovita/",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./images/twitter-icon.png",
     className: "social-links",
     id: "twitter-icon",
-    alt: "Twitter icon",
-    target: "blank"
+    alt: "Twitter icon"
   })))));
 };
 
