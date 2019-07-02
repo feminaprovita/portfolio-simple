@@ -152,8 +152,8 @@ nav a:hover,
   padding: 0;
 }
 
-/* WIDE SCREEN */
-@media(min-width: 1475px) {
+/* WIDER SCREEN */
+@media(min-width: 1243px) {
   #profile-container,
   #project-wrapper,
   #blog-wrapper,
@@ -164,7 +164,7 @@ nav a:hover,
 }
 
 /* NORMAL SCREEN */
-@media (min-width: 601px) and (max-width: 1474px) {
+@media (min-width: 601px) and (max-width: 1242px) {
   #profile-container,
   #project-wrapper,
   #blog-wrapper,
@@ -182,13 +182,6 @@ nav a:hover,
   }
   #nav-name {
     flex-wrap: nowrap;
-  }
-  #profile-container,
-  #project-wrapper,
-  #blog-wrapper,
-  #skill-wrapper {
-    padding: 1vw;
-    margin: 100px 3vw 5vw;
   }
   #profile-container {
     flex-direction: row;
