@@ -10558,237 +10558,20 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
-/***/ "./node_modules/create-react-context/lib/implementation.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/create-react-context/lib/implementation.js ***!
-  \*****************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
+  \**************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-exports.__esModule = true;
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _gud = __webpack_require__(/*! gud */ "./node_modules/gud/index.js");
-
-var _gud2 = _interopRequireDefault(_gud);
-
-var _warning = __webpack_require__(/*! fbjs/lib/warning */ "./node_modules/fbjs/lib/warning.js");
-
-var _warning2 = _interopRequireDefault(_warning);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MAX_SIGNED_31_BIT_INT = 1073741823;
-
-// Inlined Object.is polyfill.
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-function objectIs(x, y) {
-  if (x === y) {
-    return x !== 0 || 1 / x === 1 / y;
-  } else {
-    return x !== x && y !== y;
-  }
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
 }
 
-function createEventEmitter(value) {
-  var handlers = [];
-  return {
-    on: function on(handler) {
-      handlers.push(handler);
-    },
-    off: function off(handler) {
-      handlers = handlers.filter(function (h) {
-        return h !== handler;
-      });
-    },
-    get: function get() {
-      return value;
-    },
-    set: function set(newValue, changedBits) {
-      value = newValue;
-      handlers.forEach(function (handler) {
-        return handler(value, changedBits);
-      });
-    }
-  };
-}
-
-function onlyChild(children) {
-  return Array.isArray(children) ? children[0] : children;
-}
-
-function createReactContext(defaultValue, calculateChangedBits) {
-  var _Provider$childContex, _Consumer$contextType;
-
-  var contextProp = '__create-react-context-' + (0, _gud2.default)() + '__';
-
-  var Provider = function (_Component) {
-    _inherits(Provider, _Component);
-
-    function Provider() {
-      var _temp, _this, _ret;
-
-      _classCallCheck(this, Provider);
-
-      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.emitter = createEventEmitter(_this.props.value), _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    Provider.prototype.getChildContext = function getChildContext() {
-      var _ref;
-
-      return _ref = {}, _ref[contextProp] = this.emitter, _ref;
-    };
-
-    Provider.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-      if (this.props.value !== nextProps.value) {
-        var oldValue = this.props.value;
-        var newValue = nextProps.value;
-        var changedBits = void 0;
-
-        if (objectIs(oldValue, newValue)) {
-          changedBits = 0; // No change
-        } else {
-          changedBits = typeof calculateChangedBits === 'function' ? calculateChangedBits(oldValue, newValue) : MAX_SIGNED_31_BIT_INT;
-          if (true) {
-            (0, _warning2.default)((changedBits & MAX_SIGNED_31_BIT_INT) === changedBits, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: %s', changedBits);
-          }
-
-          changedBits |= 0;
-
-          if (changedBits !== 0) {
-            this.emitter.set(nextProps.value, changedBits);
-          }
-        }
-      }
-    };
-
-    Provider.prototype.render = function render() {
-      return this.props.children;
-    };
-
-    return Provider;
-  }(_react.Component);
-
-  Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = _propTypes2.default.object.isRequired, _Provider$childContex);
-
-  var Consumer = function (_Component2) {
-    _inherits(Consumer, _Component2);
-
-    function Consumer() {
-      var _temp2, _this2, _ret2;
-
-      _classCallCheck(this, Consumer);
-
-      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      return _ret2 = (_temp2 = (_this2 = _possibleConstructorReturn(this, _Component2.call.apply(_Component2, [this].concat(args))), _this2), _this2.state = {
-        value: _this2.getValue()
-      }, _this2.onUpdate = function (newValue, changedBits) {
-        var observedBits = _this2.observedBits | 0;
-        if ((observedBits & changedBits) !== 0) {
-          _this2.setState({ value: _this2.getValue() });
-        }
-      }, _temp2), _possibleConstructorReturn(_this2, _ret2);
-    }
-
-    Consumer.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-      var observedBits = nextProps.observedBits;
-
-      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT // Subscribe to all changes by default
-      : observedBits;
-    };
-
-    Consumer.prototype.componentDidMount = function componentDidMount() {
-      if (this.context[contextProp]) {
-        this.context[contextProp].on(this.onUpdate);
-      }
-      var observedBits = this.props.observedBits;
-
-      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT // Subscribe to all changes by default
-      : observedBits;
-    };
-
-    Consumer.prototype.componentWillUnmount = function componentWillUnmount() {
-      if (this.context[contextProp]) {
-        this.context[contextProp].off(this.onUpdate);
-      }
-    };
-
-    Consumer.prototype.getValue = function getValue() {
-      if (this.context[contextProp]) {
-        return this.context[contextProp].get();
-      } else {
-        return defaultValue;
-      }
-    };
-
-    Consumer.prototype.render = function render() {
-      return onlyChild(this.props.children)(this.state.value);
-    };
-
-    return Consumer;
-  }(_react.Component);
-
-  Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = _propTypes2.default.object, _Consumer$contextType);
-
-
-  return {
-    Provider: Provider,
-    Consumer: Consumer
-  };
-}
-
-exports.default = createReactContext;
-module.exports = exports['default'];
-
-/***/ }),
-
-/***/ "./node_modules/create-react-context/lib/index.js":
-/*!********************************************************!*\
-  !*** ./node_modules/create-react-context/lib/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _implementation = __webpack_require__(/*! ./implementation */ "./node_modules/create-react-context/lib/implementation.js");
-
-var _implementation2 = _interopRequireDefault(_implementation);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _react2.default.createContext || _implementation2.default;
-module.exports = exports['default'];
+module.exports = _inheritsLoose;
 
 /***/ }),
 
@@ -10885,126 +10668,6 @@ function toComment(sourceMap) {
   var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
   return '/*# ' + data + ' */';
 }
-
-/***/ }),
-
-/***/ "./node_modules/fbjs/lib/emptyFunction.js":
-/*!************************************************!*\
-  !*** ./node_modules/fbjs/lib/emptyFunction.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * 
- */
-
-function makeEmptyFunction(arg) {
-  return function () {
-    return arg;
-  };
-}
-
-/**
- * This function accepts and discards inputs; it has no side effects. This is
- * primarily useful idiomatically for overridable function endpoints which
- * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
- */
-var emptyFunction = function emptyFunction() {};
-
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function () {
-  return this;
-};
-emptyFunction.thatReturnsArgument = function (arg) {
-  return arg;
-};
-
-module.exports = emptyFunction;
-
-/***/ }),
-
-/***/ "./node_modules/fbjs/lib/warning.js":
-/*!******************************************!*\
-  !*** ./node_modules/fbjs/lib/warning.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- */
-
-
-
-var emptyFunction = __webpack_require__(/*! ./emptyFunction */ "./node_modules/fbjs/lib/emptyFunction.js");
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = emptyFunction;
-
-if (true) {
-  var printWarning = function printWarning(format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function warning(condition, format) {
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (format.indexOf('Failed Composite propType: ') === 0) {
-      return; // Ignore CompositeComponent proptype check.
-    }
-
-    if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
-        args[_key2 - 2] = arguments[_key2];
-      }
-
-      printWarning.apply(undefined, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
 
 /***/ }),
 
@@ -12083,6 +11746,203 @@ module.exports = hoistNonReactStatics;
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/mini-create-react-context/dist/esm/index.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/mini-create-react-context/dist/esm/index.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var gud__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gud */ "./node_modules/gud/index.js");
+/* harmony import */ var gud__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gud__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var tiny_warning__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tiny-warning */ "./node_modules/tiny-warning/dist/tiny-warning.esm.js");
+
+
+
+
+
+
+var MAX_SIGNED_31_BIT_INT = 1073741823;
+
+function objectIs(x, y) {
+  if (x === y) {
+    return x !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function createEventEmitter(value) {
+  var handlers = [];
+  return {
+    on: function on(handler) {
+      handlers.push(handler);
+    },
+    off: function off(handler) {
+      handlers = handlers.filter(function (h) {
+        return h !== handler;
+      });
+    },
+    get: function get() {
+      return value;
+    },
+    set: function set(newValue, changedBits) {
+      value = newValue;
+      handlers.forEach(function (handler) {
+        return handler(value, changedBits);
+      });
+    }
+  };
+}
+
+function onlyChild(children) {
+  return Array.isArray(children) ? children[0] : children;
+}
+
+function createReactContext(defaultValue, calculateChangedBits) {
+  var _Provider$childContex, _Consumer$contextType;
+
+  var contextProp = '__create-react-context-' + gud__WEBPACK_IMPORTED_MODULE_3___default()() + '__';
+
+  var Provider =
+  /*#__PURE__*/
+  function (_Component) {
+    _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1___default()(Provider, _Component);
+
+    function Provider() {
+      var _this;
+
+      _this = _Component.apply(this, arguments) || this;
+      _this.emitter = createEventEmitter(_this.props.value);
+      return _this;
+    }
+
+    var _proto = Provider.prototype;
+
+    _proto.getChildContext = function getChildContext() {
+      var _ref;
+
+      return _ref = {}, _ref[contextProp] = this.emitter, _ref;
+    };
+
+    _proto.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      if (this.props.value !== nextProps.value) {
+        var oldValue = this.props.value;
+        var newValue = nextProps.value;
+        var changedBits;
+
+        if (objectIs(oldValue, newValue)) {
+          changedBits = 0;
+        } else {
+          changedBits = typeof calculateChangedBits === 'function' ? calculateChangedBits(oldValue, newValue) : MAX_SIGNED_31_BIT_INT;
+
+          if (true) {
+            Object(tiny_warning__WEBPACK_IMPORTED_MODULE_4__["default"])((changedBits & MAX_SIGNED_31_BIT_INT) === changedBits, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: ' + changedBits);
+          }
+
+          changedBits |= 0;
+
+          if (changedBits !== 0) {
+            this.emitter.set(nextProps.value, changedBits);
+          }
+        }
+      }
+    };
+
+    _proto.render = function render() {
+      return this.props.children;
+    };
+
+    return Provider;
+  }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+  Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object.isRequired, _Provider$childContex);
+
+  var Consumer =
+  /*#__PURE__*/
+  function (_Component2) {
+    _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_1___default()(Consumer, _Component2);
+
+    function Consumer() {
+      var _this2;
+
+      _this2 = _Component2.apply(this, arguments) || this;
+      _this2.state = {
+        value: _this2.getValue()
+      };
+
+      _this2.onUpdate = function (newValue, changedBits) {
+        var observedBits = _this2.observedBits | 0;
+
+        if ((observedBits & changedBits) !== 0) {
+          _this2.setState({
+            value: _this2.getValue()
+          });
+        }
+      };
+
+      return _this2;
+    }
+
+    var _proto2 = Consumer.prototype;
+
+    _proto2.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+      var observedBits = nextProps.observedBits;
+      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT : observedBits;
+    };
+
+    _proto2.componentDidMount = function componentDidMount() {
+      if (this.context[contextProp]) {
+        this.context[contextProp].on(this.onUpdate);
+      }
+
+      var observedBits = this.props.observedBits;
+      this.observedBits = observedBits === undefined || observedBits === null ? MAX_SIGNED_31_BIT_INT : observedBits;
+    };
+
+    _proto2.componentWillUnmount = function componentWillUnmount() {
+      if (this.context[contextProp]) {
+        this.context[contextProp].off(this.onUpdate);
+      }
+    };
+
+    _proto2.getValue = function getValue() {
+      if (this.context[contextProp]) {
+        return this.context[contextProp].get();
+      } else {
+        return defaultValue;
+      }
+    };
+
+    _proto2.render = function render() {
+      return onlyChild(this.props.children)(this.state.value);
+    };
+
+    return Consumer;
+  }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+  Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object, _Consumer$contextType);
+  return {
+    Provider: Provider,
+    Consumer: Consumer
+  };
+}
+
+var index = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext || createReactContext;
+
+/* harmony default export */ __webpack_exports__["default"] = (index);
 
 
 /***/ }),
@@ -34717,7 +34577,12 @@ function (_React$Component) {
   var _proto = Link.prototype;
 
   _proto.handleClick = function handleClick(event, history) {
-    if (this.props.onClick) this.props.onClick(event);
+    try {
+      if (this.props.onClick) this.props.onClick(event);
+    } catch (ex) {
+      event.preventDefault();
+      throw ex;
+    }
 
     if (!event.defaultPrevented && // onClick prevented default
     event.button === 0 && ( // ignore everything but left clicks
@@ -34794,7 +34659,7 @@ function NavLink(_ref) {
       classNameProp = _ref.className,
       exact = _ref.exact,
       isActiveProp = _ref.isActive,
-      location = _ref.location,
+      locationProp = _ref.location,
       strict = _ref.strict,
       styleProp = _ref.style,
       to = _ref.to,
@@ -34803,24 +34668,23 @@ function NavLink(_ref) {
   var path = typeof to === "object" ? to.pathname : to; // Regex taken from: https://github.com/pillarjs/path-to-regexp/blob/master/index.js#L202
 
   var escapedPath = path && path.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1");
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    path: escapedPath,
-    exact: exact,
-    strict: strict,
-    location: location,
-    children: function children(_ref2) {
-      var location = _ref2.location,
-          match = _ref2.match;
-      var isActive = !!(isActiveProp ? isActiveProp(match, location) : match);
-      var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
-      var style = isActive ? Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, styleProp, activeStyle) : styleProp;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
-        "aria-current": isActive && ariaCurrent || null,
-        className: className,
-        style: style,
-        to: to
-      }, rest));
-    }
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__["__RouterContext"].Consumer, null, function (context) {
+    !context ?  true ? Object(tiny_invariant__WEBPACK_IMPORTED_MODULE_8__["default"])(false, "You should not use <NavLink> outside a <Router>") : undefined : void 0;
+    var pathToMatch = locationProp ? locationProp.pathname : context.location.pathname;
+    var match = escapedPath ? Object(react_router__WEBPACK_IMPORTED_MODULE_2__["matchPath"])(pathToMatch, {
+      path: escapedPath,
+      exact: exact,
+      strict: strict
+    }) : null;
+    var isActive = !!(isActiveProp ? isActiveProp(match, context.location) : match);
+    var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
+    var style = isActive ? Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, styleProp, activeStyle) : styleProp;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
+      "aria-current": isActive && ariaCurrent || null,
+      className: className,
+      style: style,
+      to: to
+    }, rest));
   });
 }
 
@@ -34831,10 +34695,10 @@ if (true) {
     activeClassName: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
     activeStyle: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
     className: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string,
-    exact: react_router__WEBPACK_IMPORTED_MODULE_2__["Route"].propTypes.exact,
+    exact: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
     isActive: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
     location: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-    strict: react_router__WEBPACK_IMPORTED_MODULE_2__["Route"].propTypes.strict,
+    strict: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
     style: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
   });
 }
@@ -34864,8 +34728,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return matchPath; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return withRouter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__RouterContext", function() { return context; });
-/* harmony import */ var create_react_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! create-react-context */ "./node_modules/create-react-context/lib/index.js");
-/* harmony import */ var create_react_context__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(create_react_context__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var mini_create_react_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mini-create-react-context */ "./node_modules/mini-create-react-context/dist/esm/index.js");
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
@@ -34898,15 +34761,14 @@ __webpack_require__.r(__webpack_exports__);
 // TODO: Replace with React.createContext once we can assume React 16+
 
 var createNamedContext = function createNamedContext(name) {
-  var context = create_react_context__WEBPACK_IMPORTED_MODULE_0___default()();
-  context.Provider.displayName = name + ".Provider";
-  context.Consumer.displayName = name + ".Consumer";
+  var context = Object(mini_create_react_context__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  context.displayName = name;
   return context;
 };
 
 var context =
 /*#__PURE__*/
-createNamedContext('Router');
+createNamedContext("Router");
 
 /**
  * The public API for putting history on context.
@@ -35177,7 +35039,11 @@ function Redirect(_ref) {
         method(location);
       },
       onUpdate: function onUpdate(self, prevProps) {
-        if (!Object(history__WEBPACK_IMPORTED_MODULE_5__["locationsAreEqual"])(prevProps.to, location)) {
+        var prevLocation = Object(history__WEBPACK_IMPORTED_MODULE_5__["createLocation"])(prevProps.to);
+
+        if (!Object(history__WEBPACK_IMPORTED_MODULE_5__["locationsAreEqual"])(prevLocation, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__["default"])({}, location, {
+          key: prevLocation.key
+        }))) {
           method(location);
         }
       },
@@ -35239,6 +35105,7 @@ function matchPath(pathname, options) {
       sensitive = _options$sensitive === void 0 ? false : _options$sensitive;
   var paths = [].concat(path);
   return paths.reduce(function (matched, path) {
+    if (!path) return null;
     if (matched) return matched;
 
     var _compilePath = compilePath$1(path, {
@@ -35441,7 +35308,8 @@ function (_React$Component) {
     var _this$props = this.props,
         _this$props$basename = _this$props.basename,
         basename = _this$props$basename === void 0 ? "" : _this$props$basename,
-        context = _this$props.context;
+        _this$props$context = _this$props.context,
+        context = _this$props$context === void 0 ? {} : _this$props$context;
     context.action = action;
     context.location = addBasename(basename, Object(history__WEBPACK_IMPORTED_MODULE_5__["createLocation"])(location));
     context.url = createURL(context.location);
@@ -35554,25 +35422,26 @@ if (true) {
  */
 
 function withRouter(Component) {
+  var displayName = "withRouter(" + (Component.displayName || Component.name) + ")";
+
   var C = function C(props) {
     var wrappedComponentRef = props.wrappedComponentRef,
         remainingProps = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_10__["default"])(props, ["wrappedComponentRef"]);
 
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Route, {
-      children: function children(routeComponentProps) {
-        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__["default"])({}, remainingProps, routeComponentProps, {
-          ref: wrappedComponentRef
-        }));
-      }
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(context.Consumer, null, function (context$$1) {
+      !context$$1 ?  true ? Object(tiny_invariant__WEBPACK_IMPORTED_MODULE_6__["default"])(false, "You should not use <" + displayName + " /> outside a <Router>") : undefined : void 0;
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__["default"])({}, remainingProps, context$$1, {
+        ref: wrappedComponentRef
+      }));
     });
   };
 
-  C.displayName = "withRouter(" + (Component.displayName || Component.name) + ")";
+  C.displayName = displayName;
   C.WrappedComponent = Component;
 
   if (true) {
     C.propTypes = {
-      wrappedComponentRef: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func
+      wrappedComponentRef: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object])
     };
   }
 
@@ -40124,7 +39993,7 @@ module.exports = g;
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "body {\n  font-family: Georgia, 'Times New Roman', Times, serif;\n  background: #C7E5FF;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-bottom: 1px ridge darkslategray;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n.navlink-one {\n  padding: 0.5em;\n}\n\n/* FOOTER */\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-top: 1px ridge darkslategray;\n  padding: 0.3vw;\n}\n\n#social-container {\n  display: block;\n  text-align: center;\n  max-height: 50px;\n  padding: 0.5vh;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1.2px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/* WIDE SCREEN */\n@media(min-width: 1475px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 133px 3vw 9vw;\n  }\n}\n\n/* NORMAL SCREEN */\n@media (min-width: 601px) and (max-width: 1474px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 5vw;\n  }\n}\n\n/* DESKTOP */\n@media (min-width: 601px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 5vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;\n    grid-template-rows: 1fr 1fr;\n    grid-template-areas:\n    'lang lang frontend frontend backend backend'\n    '. tools tools other other .'\n  }\n  #Languages-box {\n    grid-area: lang;\n    grid-row:  1 / 1;\n    grid-column: 1 / 3;\n  }\n  #Frontend-box {\n    grid-area: frontend;\n    grid-row:  1 / 1;\n    grid-column: 3 / 5;\n  }\n  #Backend-box {\n    grid-area: backend;\n    grid-row:  1 / 1;\n    grid-column: 5 / 7;\n  }\n  #Tools-box {\n    grid-area: tools;\n    grid-row:  2 / 2;\n    grid-column: 2 / 4;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 2 / 2;\n    grid-column: 4 / 6;\n  }\n}\n\n/* TABLET */\n@media (min-width: 451px) and (max-width: 600px) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    grid-template-rows: 1fr 1fr 1fr;\n    grid-template-areas:\n    'lang lang frontend frontend'\n    'backend backend tools tools'\n    '. other other .'\n  }\n  #Languages-box {\n    grid-area: lang;\n    grid-row:  1 / 1;\n    grid-column: 1 / 3;\n  }\n  #Frontend-box {\n    grid-area: frontend;\n    grid-row:  1 / 1;\n    grid-column: 3 / 5;\n  }\n  #Backend-box {\n    grid-area: backend;\n    grid-row:  2 / 2;\n    grid-column: 1 / 3;\n  }\n  #Tools-box {\n    grid-area: tools;\n    grid-row:  2 / 2;\n    grid-column: 3 / 5;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 3 / 3;\n    grid-column: 2 / 4;\n  }\n  .one-project {\n    flex-direction: column-reverse;\n  }\n}\n\n/* MOBILE */\n@media (max-width: 450px) {\n  nav {\n    overflow-y: auto;\n  }\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: column;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' 1fr\n    'frontend' 1fr\n    'backend' 1fr\n    'tools' 1fr\n    'other' 1fr\n    / repeat(5, 1fr);\n  }\n  .skill-box {\n    padding-bottom: 1em;\n  }\n  #Languages-box {\n    grid-area: lang;\n    grid-row:  1 / 1;\n    grid-column: 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend;\n    grid-row:  2 / 2;\n    grid-column: 1 / 1;\n  }\n  #Backend-box {\n    grid-area: backend;\n    grid-row:  3 / 3;\n    grid-column: 1 / 1;\n  }\n  #Tools-box {\n    grid-area: tools;\n    grid-row:  4 / 4;\n    grid-column: 1 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 5 / 5;\n    grid-column: 1 / 1;\n    margin-bottom: 2vh;\n  }\n  .one-project {\n    flex-direction: column-reverse;\n  }\n  .one-blog {\n    flex-direction: column;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n/* BLOG PAGE */\n.one-blog,\n.one-project {\n  margin: 0.5vw;\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.one-blog {\n  padding: 1vw;\n}\n\n.one-project {\n  justify-content: space-between;\n  padding: 1vw 1vw 1vw 2vw;\n}\n\n.one-blog a h2,\n.one-project a {\n  color: black\n}\n\n.blog-thumbnail,\n.project-thumbnail {\n  margin: 1.5vw;\n  max-width: 180px;\n  max-height: 140px;\n  flex-shrink: 1;\n  border: 1px solid black;\n}\n", ""]);
+exports.push([module.i, "body {\n  font-family: Arial, Helvetica, sans-serif;\n  background: #C7E5FF;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  cursor: pointer;\n}\n\n/* NAVBAR */\nnav {\n  z-index: 2;\n  position: fixed;\n  top: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-bottom: 1px ridge darkslategray;\n}\n\nnav a {\n  color: #6341a9;\n}\n\nnav a:hover,\n#nav-name a:hover {\n  font-weight: bolder;\n  text-shadow: 0.08em 0.14em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n#navbar {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-weight: bold;\n  margin: 0.4em;\n  max-height: 87px;\n}\n\n#nav-name {\n  color: #6341a9;\n  font-size: 2.5em;\n  padding: 0.2em;\n}\n\n#nav-name a {\n  text-shadow: 0.08em 0.11em #73b9fa;\n}\n\n#navlink-container {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  flex-wrap: nowrap;\n  height: 6vw;\n  width: 100vw;\n}\n\n.navlink-one {\n  padding: 0.5em;\n}\n\n/* FOOTER */\n#footer {\n  z-index: 2;\n  position: fixed;\n  bottom: 0;\n  background: linear-gradient(to right, #B9DEFF, #dcccfd);\n  width: 100%;\n  max-height: 55px;\n  text-shadow: 0.08em 0.14em #73b9fa;\n  border-top: 1px ridge darkslategray;\n  padding: 0.3vw;\n}\n\n#social-container {\n  display: block;\n  text-align: center;\n  max-height: 50px;\n  padding: 0.5vh;\n}\n\n.social-links {\n  max-height: 18px;\n  max-width: 18px;\n  vertical-align: top;\n}\n\n#twitter-icon {\n  max-height: 24px;\n  max-width: 24px;\n}\n\n/* BODY */\n\n/* SPLASH PAGE */\n#profile-container {\n  background: palegoldenrod;\n  border: 1.2px dashed gray;\n  border-radius: 15px;\n  display: flex;\n}\n\n#profile-pic {\n  padding: 4vw;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 222px;\n}\n\n#profile-text {\n  padding: 4vw;\n  text-align: center;\n}\n\n/* SKILLS PAGE */\n#skill-wrapper {\n  display: grid;\n  grid-gap: 1rem;\n  place-items: stretch;\n  place-content: stretch;\n}\n\n#projects h1,\n#blog h1,\n#skills h1 {\n  text-align: center;\n}\n\n.skill-box h2 {\n  text-shadow: 0.08em 0.14em #dcccfd;\n}\n\n.skill-box {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  text-align: center;\n}\n\n.skill-box ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/* WIDE SCREEN */\n@media(min-width: 1475px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 155px 3vw 9vw;\n  }\n}\n\n/* NORMAL SCREEN */\n@media (min-width: 601px) and (max-width: 1474px) {\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 0vw;\n  }\n}\n\n/* DESKTOP */\n@media (min-width: 601px) {\n  #navbar {\n    max-height: 87px;\n    justify-content: space-between;\n  }\n  #nav-name {\n    flex-wrap: nowrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 100px 3vw 5vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;\n    grid-template-rows: 1fr 1fr;\n    grid-template-areas:\n    'lang lang frontend frontend backend backend'\n    '. tools tools other other .'\n  }\n  #Languages-box {\n    grid-area: lang;\n    grid-row:  1 / 1;\n    grid-column: 1 / 3;\n  }\n  #Frontend-box {\n    grid-area: frontend;\n    grid-row:  1 / 1;\n    grid-column: 3 / 5;\n  }\n  #Backend-box {\n    grid-area: backend;\n    grid-row:  1 / 1;\n    grid-column: 5 / 7;\n  }\n  #Tools-box {\n    grid-area: tools;\n    grid-row:  2 / 2;\n    grid-column: 2 / 4;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 2 / 2;\n    grid-column: 4 / 6;\n  }\n}\n\n/* TABLET */\n@media (min-width: 451px) and (max-width: 600px) {\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 115px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: row;\n  }\n  #skill-wrapper{\n    grid-template-columns: 1fr 1fr 1fr 1fr;\n    grid-template-rows: 1fr 1fr 1fr;\n    grid-template-areas:\n    'lang lang frontend frontend'\n    'backend backend tools tools'\n    '. other other .'\n  }\n  #Languages-box {\n    grid-area: lang;\n    grid-row:  1 / 1;\n    grid-column: 1 / 3;\n  }\n  #Frontend-box {\n    grid-area: frontend;\n    grid-row:  1 / 1;\n    grid-column: 3 / 5;\n  }\n  #Backend-box {\n    grid-area: backend;\n    grid-row:  2 / 2;\n    grid-column: 1 / 3;\n  }\n  #Tools-box {\n    grid-area: tools;\n    grid-row:  2 / 2;\n    grid-column: 3 / 5;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 3 / 3;\n    grid-column: 2 / 4;\n  }\n  .one-project {\n    flex-direction: column-reverse;\n  }\n}\n\n/* MOBILE */\n@media (max-width: 450px) {\n  nav {\n    overflow-y: auto;\n  }\n  #navbar {\n    flex-wrap: wrap;\n    justify-content: center;\n  }\n  #nav-name {\n    flex-wrap: wrap;\n  }\n  #profile-container,\n  #project-wrapper,\n  #blog-wrapper,\n  #skill-wrapper {\n    padding: 1vw;\n    margin: 120px 3vw 9vw;\n  }\n  #profile-container {\n    flex-direction: column;\n  }\n  #skill-wrapper{\n    grid-template:\n    'lang' 1fr\n    'frontend' 1fr\n    'backend' 1fr\n    'tools' 1fr\n    'other' 1fr\n    / repeat(5, 1fr);\n  }\n  .skill-box {\n    padding-bottom: 1em;\n  }\n  #Languages-box {\n    grid-area: lang;\n    grid-row:  1 / 1;\n    grid-column: 1 / 1;\n  }\n  #Frontend-box {\n    grid-area: frontend;\n    grid-row:  2 / 2;\n    grid-column: 1 / 1;\n  }\n  #Backend-box {\n    grid-area: backend;\n    grid-row:  3 / 3;\n    grid-column: 1 / 1;\n  }\n  #Tools-box {\n    grid-area: tools;\n    grid-row:  4 / 4;\n    grid-column: 1 / 1;\n  }\n  #Other-box {\n    grid-area: other;\n    grid-row: 5 / 5;\n    grid-column: 1 / 1;\n    margin-bottom: 2vh;\n  }\n  .one-project {\n    flex-direction: column-reverse;\n  }\n  .one-blog {\n    flex-direction: column;\n  }\n}\n\n/* PROJECTS PAGE */\n#project-wrapper,\n#blog-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-content: flex-end;\n}\n\n#project-wrapper > div {\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  padding: 1vw;\n  margin: 0.5vw;\n}\n\n#project-wrapper a:hover,\n.one-blog a:hover,\n.one-project a:hover {\n  font-weight: bolder;\n  text-shadow: 0.12em 0.21em palegoldenrod;\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n\n/* BLOG PAGE */\n.one-blog,\n.one-project {\n  margin: 0.5vw;\n  border: 1.2px dashed #CA006D;\n  border-radius: 15px;\n  display: flex;\n  align-items: center;\n}\n\n.one-blog {\n  padding: 1vw;\n}\n\n.one-project {\n  justify-content: space-between;\n  padding: 1vw 1vw 1vw 2vw;\n}\n\n.one-blog a,\n.one-project a {\n  color: black;\n  text-shadow: 0.12em 0.21em #dcccfd;\n}\n\n.blog-thumbnail,\n.project-thumbnail {\n  margin: 1.5vw;\n  max-width: 180px;\n  max-height: 140px;\n  flex-shrink: 1;\n  border: 1px solid black;\n}\n", ""]);
 
 
 
