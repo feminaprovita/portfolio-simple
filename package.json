@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/feminaprovita/portfolio-simple#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "morgan": "^1.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^5.0.1",
     "style-loader": "^0.23.1",
     "update": "^0.7.4"
   },
@@ -50,7 +50,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   }
 }
