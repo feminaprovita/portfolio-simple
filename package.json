@@ -4,7 +4,7 @@
   "description": "A simple reboot of my portfolio site",
   "engines": {
     "node": "11.0.0",
-    "npm": "6.9.0"
+    "npm": "6.10.0"
   },
   "repository": {
     "type": "git",
