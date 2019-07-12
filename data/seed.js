@@ -149,10 +149,11 @@ const projectData = [{
       'Populating archive required scraping the DOM 800x in real time',
       'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion',
       'Future script: scrape facebook daily, updating database and front page with latest question' ],
+  url: 'https://kfbc.herokuapp.com',
   github: 'https://github.com/feminaprovita/kfbc-website',
   video: 'http://bit.ly/kfbc',
   bestLink: 'http://bit.ly/kfbc',
-  imageUrl: 'https://i.imgur.com/AXzQmn4.png',
+  imageUrl: 'https://i.imgur.com/dKXhDzd.png',
   skills:
     [ 'js', 'node', 'express', 'axios', 'sequelize', 'react', 'redux', 'css', 'flexbox', 'git', 'postgres', 'heroku', 'puppeteer', 'chalk' ],
   priority: 5

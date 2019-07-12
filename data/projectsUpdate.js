@@ -135,10 +135,11 @@ module.exports = [
       'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion',
       'Future script: scrape facebook daily, updating database and front page with latest question',
     ],
+    url: 'https://kfbc.herokuapp.com',
     github: 'https://github.com/feminaprovita/kfbc-website',
     video: 'http://bit.ly/kfbc',
-    bestLink: 'http://bit.ly/kfbc',
-    imageUrl: 'https://i.imgur.com/AXzQmn4.png',
+    bestLink: 'https://kfbc.herokuapp.com',
+    imageUrl: 'https://i.imgur.com/oAtskuV.png',
     skills: [
       'js',
       'node',
