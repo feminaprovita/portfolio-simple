@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: 'Portfolio Website',
-    role: 'Engineer',
+    role: 'Fullstack Engineer',
     bullets: [
       'Built with Express, React, and Webpack',
       'Styled with CSS Grid',
@@ -34,10 +34,10 @@ module.exports = [
     imgAlt: 'portfolio-website-thumbnail',
   },
   {
-    name: 'Masks Google Plus Rescue',
-    role: 'Engineer',
+    name: 'Google+ Rescue',
+    role: 'Backend Engineer',
     paragraph:
-      'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+      'Collaborated with another engineer to analyze and capture full archive (posts, comments, uploaded photos, links) of an active Google+ Community in advance of the platform\'s shutdown, scraping with Puppeteer.',
     bullets: [
       'Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown',
       'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer',
@@ -56,9 +56,9 @@ module.exports = [
   },
   {
     name: 'Moodify',
-    role: 'Fullstack Software Engineer',
+    role: 'Fullstack Engineer',
     paragraph:
-      "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+      'Wrote, updated, and debugged a complex JavaScript function mapping Google Cloud Vision\'s facial recognition analysis of user\'s photo to a Spotify search string, to generate a custom playlist matching the user\'s mood.',
     bullets: [
       'User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood',
       "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search",
@@ -89,9 +89,9 @@ module.exports = [
   },
   {
     name: 'Timelink Travel Services',
-    role: 'Fullstack Software Engineer',
+    role: 'Fullstack Engineer',
     paragraph:
-      'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+      'Part of a team that built an e-commerce site with integrated payment options in less than two weeks. Involved in all facets of production, including styling with CSS and Bootstrap. Practiced Agile workflow and maintained excellent Git hygiene.',
     bullets: [
       'E-commerce site with integrated payment option, built in under two weeks',
       'Practiced Agile workflow and maintained excellent Git hygiene',
@@ -126,9 +126,9 @@ module.exports = [
   },
   {
     name: 'Keeping Facebook Cheerful',
-    role: 'Solo Engineer',
+    role: 'Fullstack Engineer',
     paragraph:
-      "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+      'Created an archive of nearly a thousand public Facebook posts (required scraping the DOM more than 800 times to set up).',
     bullets: [
       'Display of longstanding personal project, asking silly/creative questions daily',
       'Populating archive required scraping the DOM 800x in real time',
