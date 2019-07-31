@@ -478,11 +478,11 @@ var Projects = function Projects() {
       className: "project-info"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: p.bestLink
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, p.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, p.role)), p.bullets && p.bullets.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, p.bullets.map(function (b, i) {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, p.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", null, p.role)), p.paragraph ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, p.paragraph) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, p.bullets.map(function (b, i) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: i
       }, b);
-    })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, p.paragraph), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectLinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProjectLinks__WEBPACK_IMPORTED_MODULE_2__["default"], {
       project: p
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: p.imgAlt,
@@ -636,7 +636,7 @@ var Splash = function Splash() {
     id: "profile-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm a new graduate of the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.gracehopper.com"
-  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC or DC.")));
+  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineer job in NYC.")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
@@ -816,7 +816,7 @@ module.exports = [{
 
 module.exports = [{
   name: 'Portfolio Website',
-  role: 'Engineer',
+  role: 'Fullstack Engineer',
   bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on Heroku', 'Previous build also used Redux, Sequelize, and PostgreSQL'],
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
@@ -828,9 +828,9 @@ module.exports = [{
   keyName: 'portfolio-website-component',
   imgAlt: 'portfolio-website-thumbnail'
 }, {
-  name: 'Masks Google Plus Rescue',
-  role: 'Engineer',
-  paragraph: 'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+  name: 'Google+ Rescue',
+  role: 'Backend Engineer',
+  paragraph: 'Collaborated with another engineer to analyze and capture full archive (posts, comments, uploaded photos, links) of an active Google+ Community in advance of the platform\'s shutdown, scraping with Puppeteer.',
   bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
   github: 'https://github.com/feminaprovita/masks-rescue',
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
@@ -843,8 +843,8 @@ module.exports = [{
   imgAlt: 'masks-google-plus-rescue-thumbnail'
 }, {
   name: 'Moodify',
-  role: 'Fullstack Software Engineer',
-  paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  role: 'Fullstack Engineer',
+  paragraph: 'Wrote, updated, and debugged a complex JavaScript function mapping Google Cloud Vision\'s facial recognition analysis of user\'s photo to a Spotify search string, to generate a custom playlist matching the user\'s mood.',
   bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search"],
   url: 'https://my-moodify.herokuapp.com',
   github: 'https://github.com/grape-emu/my-moodify',
@@ -858,8 +858,8 @@ module.exports = [{
   imgAlt: 'moodify-thumbnail'
 }, {
   name: 'Timelink Travel Services',
-  role: 'Fullstack Software Engineer',
-  paragraph: 'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+  role: 'Fullstack Engineer',
+  paragraph: 'Part of a team that built an e-commerce site with integrated payment options in less than two weeks. Involved in all facets of production, including styling with CSS and Bootstrap. Practiced Agile workflow and maintained excellent Git hygiene.',
   bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
   url: 'https://pm-grace-shopper.herokuapp.com',
   github: 'https://github.com/pigMercury/grace-shopper',
@@ -872,8 +872,8 @@ module.exports = [{
   imgAlt: 'timelink-travel-services-thumbnail'
 }, {
   name: 'Keeping Facebook Cheerful',
-  role: 'Solo Engineer',
-  paragraph: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  role: 'Fullstack Engineer',
+  paragraph: 'Created an archive of nearly a thousand public Facebook posts (required scraping the DOM more than 800 times to set up).',
   bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
   url: 'https://kfbc.herokuapp.com',
   github: 'https://github.com/feminaprovita/kfbc-website',
@@ -934,7 +934,7 @@ var jobData = [{
   jobTitle: 'Assistant Editor',
   monthStart: 'February 2013',
   monthEnd: 'August 2018',
-  bullets: ['Editorial miscellany for monthly Catholic devotional (circ. 270,000), books for kids and adults', 'Created several in-house spreadsheets to improve or optimize repeat tasks for self and others', 'Merged marketing texts to harmonize copy across platforms, notably editing the website'],
+  bullets: ['Proofread and fact-checked every issue of a monthly magazine with a circulation of more than 270,000, including maintaining regular correspondence with subject-matter experts on improving content', 'Pitched, researched, assessed market and wrote proposals for, and edited a variety of books, exponentially increasing personal volume of books edited over five years (from 2 in 2012 to 16 in 2018)', 'Rewrote and dramatically expanded website FAQ; merged marketing texts to harmonize copy across platforms', 'Took initiative to create and maintain U.S. office’s only spreadsheet of all books and their information. Created and maintained several in-house organizing spreadsheets to optimize repeating tasks, saving at least 20 person-hours/month.', 'Expanded and reorganized an existing 3-page magazine-only style guide into a 22-page booklet, updated three times a year, with clear sections for magazines, books, and marketing', 'Developed a reputation as the “go-to” person in the office for technical and subject-matter questions'],
   paragraph: 'Proofread, fact-checked, and applied style guide to monthly Catholic worship aid reaching about 270,000 subscribers; also chose hymns for daily offices, suggested/organized occasional liturgical improvements, and aided with translation and marketing tasks. Edited, compiled, and proofread various book projects as needed. Since 2017, also edited bookstore website and ebooks, developed new books, and creatively expanded marketing efforts at minimal expense.',
   skills: ['proofing, copyediting', 'html', 'french', 'latin']
 }, {
@@ -948,7 +948,7 @@ var jobData = [{
 }];
 var projectData = [{
   name: 'Portfolio Website',
-  role: 'Engineer',
+  role: 'Fullstack Engineer',
   bullets: ['Built with Express, React, and Webpack', 'Styled with CSS Grid', 'Hosted on Heroku', 'Previous build also used Redux, Sequelize, and PostgreSQL'],
   github: 'https://github.com/feminaprovita/portfolio-simple',
   blogUrl: 'https://medium.com/@feminaprovita/things-i-learned-building-my-portfolio-site-7abb472599ae',
@@ -957,9 +957,10 @@ var projectData = [{
   skills: ['js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'regex'],
   priority: 1
 }, {
-  name: 'Masks Google Plus Rescue',
-  role: 'Engineer',
-  paragraph: 'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+  name: 'Google+ Rescue',
+  role: 'Backend Engineer',
+  par2: 'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+  paragraph: 'Collaborated with another engineer to analyze and capture full archive (posts, comments, uploaded photos, links) of an active Google+ Community in advance of the platform\'s shutdown, scraping with Puppeteer.',
   bullets: ['Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown', 'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer'],
   github: 'https://github.com/feminaprovita/masks-rescue',
   blogUrl: 'https://medium.com/@feminaprovita/pair-programming-after-bootcamp-unintentionally-a-great-learning-experience-2201223413d',
@@ -969,8 +970,9 @@ var projectData = [{
   priority: 2
 }, {
   name: 'Moodify',
-  role: 'Fullstack Software Engineer',
-  paragraph: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  role: 'Fullstack Engineer',
+  par2: "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  paragraph: 'Wrote, updated, and debugged a complex JavaScript function mapping Google Cloud Vision\'s facial recognition analysis of user\'s photo to a Spotify search string, to generate a custom playlist matching the user\'s mood.',
   bullets: ['User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood', "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search"],
   url: 'https://my-moodify.herokuapp.com',
   github: 'https://github.com/grape-emu/my-moodify',
@@ -981,8 +983,9 @@ var projectData = [{
   priority: 3
 }, {
   name: 'Timelink Travel Services',
-  role: 'Fullstack Software Engineer',
-  paragraph: 'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+  role: 'Fullstack Engineer',
+  par2: 'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+  paragraph: 'Part of a team that built an e-commerce site with integrated payment options in less than two weeks. Involved in all facets of production, including styling with CSS and Bootstrap. Practiced Agile workflow and maintained excellent Git hygiene.',
   bullets: ['E-commerce site with integrated payment option, built in under two weeks', 'Practiced Agile workflow and maintained excellent Git hygiene', 'CRUD app built in Node with Express, Sequelize, React, and Redux', 'Involved with all facets of production, styled with CSS and Bootstrap'],
   url: 'https://pm-grace-shopper.herokuapp.com',
   github: 'https://github.com/pigMercury/grace-shopper',
@@ -992,8 +995,9 @@ var projectData = [{
   priority: 4
 }, {
   name: 'Keeping Facebook Cheerful',
-  role: 'Solo Engineer',
-  paragraph: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  role: 'Fullstack Engineer',
+  par2: "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  paragraph: 'Created an archive of nearly a thousand public Facebook posts (required scraping the DOM more than 800 times to set up).',
   bullets: ['Display of longstanding personal project, asking silly/creative questions daily', 'Populating archive required scraping the DOM 800x in real time', 'Future features: archive search by keyword, tag, date; display five random questions; submit suggestion', 'Future script: scrape facebook daily, updating database and front page with latest question'],
   url: 'https://kfbc.herokuapp.com',
   github: 'https://github.com/feminaprovita/kfbc-website',
@@ -34413,7 +34417,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

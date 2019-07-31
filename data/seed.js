@@ -48,9 +48,12 @@ const jobData = [{
     monthStart: 'February 2013',
     monthEnd: 'August 2018',
     bullets: [
-      'Editorial miscellany for monthly Catholic devotional (circ. 270,000), books for kids and adults',
-      'Created several in-house spreadsheets to improve or optimize repeat tasks for self and others',
-      'Merged marketing texts to harmonize copy across platforms, notably editing the website'
+      'Proofread and fact-checked every issue of a monthly magazine with a circulation of more than 270,000, including maintaining regular correspondence with subject-matter experts on improving content',
+      'Pitched, researched, assessed market and wrote proposals for, and edited a variety of books, exponentially increasing personal volume of books edited over five years (from 2 in 2012 to 16 in 2018)',
+      'Rewrote and dramatically expanded website FAQ; merged marketing texts to harmonize copy across platforms',
+      'Took initiative to create and maintain U.S. office’s only spreadsheet of all books and their information. Created and maintained several in-house organizing spreadsheets to optimize repeating tasks, saving at least 20 person-hours/month.',
+      'Expanded and reorganized an existing 3-page magazine-only style guide into a 22-page booklet, updated three times a year, with clear sections for magazines, books, and marketing',
+      'Developed a reputation as the “go-to” person in the office for technical and subject-matter questions'
     ],
     paragraph:
       'Proofread, fact-checked, and applied style guide to monthly Catholic worship aid reaching about 270,000 subscribers; also chose hymns for daily offices, suggested/organized occasional liturgical improvements, and aided with translation and marketing tasks. Edited, compiled, and proofread various book projects as needed. Since 2017, also edited bookstore website and ebooks, developed new books, and creatively expanded marketing efforts at minimal expense.',
@@ -74,7 +77,7 @@ const jobData = [{
 
 const projectData = [{
   name: 'Portfolio Website',
-  role: 'Engineer',
+  role: 'Fullstack Engineer',
   bullets:
     [ 'Built with Express, React, and Webpack',
       'Styled with CSS Grid',
@@ -90,10 +93,12 @@ const projectData = [{
     [ 'js', 'node', 'express', 'react', 'html', 'css', 'grid', 'git', 'webpack', 'heroku', 'regex' ],
   priority: 1
 }, {
-  name: 'Masks Google Plus Rescue',
-  role: 'Engineer',
-  paragraph:
+  name: 'Google+ Rescue',
+  role: 'Backend Engineer',
+  par2:
     'Scraped, organized, and cleaned up data from a Google Plus community before Google pulled the plug on Plus. It went so well, we did the same for other communities run by the same game company!',
+  paragraph:
+    'Collaborated with another engineer to analyze and capture full archive (posts, comments, uploaded photos, links) of an active Google+ Community in advance of the platform\'s shutdown, scraping with Puppeteer.',
   bullets:
     [ 'Co-wrote functions and scraped data from active Google+ community in advance of planned shutdown',
       'Analyzed then captured full archive (posts, comments, uploaded photos, links), scraping with Puppeteer' ],
@@ -108,9 +113,11 @@ const projectData = [{
   priority: 2
 }, {
   name: 'Moodify',
-  role: 'Fullstack Software Engineer',
-  paragraph:
+  role: 'Fullstack Engineer',
+  par2:
     "The user takes a selfie, or uploads a photo, which we then upload to Google Cloud Vision. Cloud Vision returns to us an image analysis object, which we run through our own home-brewed function (transforming Google's word data into numerical values, crunching them based on positivity or negativity and importance, and using a fixed-point radius to get a range for Spotify). This yields a search query that we pass to Spotify along with the relevant user data, permitting the user to play the songs and/or save the playlist to their account.",
+  paragraph:
+    'Wrote, updated, and debugged a complex JavaScript function mapping Google Cloud Vision\'s facial recognition analysis of user\'s photo to a Spotify search string, to generate a custom playlist matching the user\'s mood.',
   bullets:
     [ 'User takes or uploads a selfie, and receives a unique Spotify playlist matching the image’s mood',
       "Wrote/updated function mapping Google Cloud Vision's analysis object to a string for Spotify’s search" ],
@@ -124,9 +131,11 @@ const projectData = [{
   priority: 3
 }, {
   name: 'Timelink Travel Services',
-  role: 'Fullstack Software Engineer',
-  paragraph:
+  role: 'Fullstack Engineer',
+  par2:
     'Premise: our client had recently outgrown their etsy shop, and needed a functional e-commerce site that could display their wares.',
+  paragraph:
+    'Part of a team that built an e-commerce site with integrated payment options in less than two weeks. Involved in all facets of production, including styling with CSS and Bootstrap. Practiced Agile workflow and maintained excellent Git hygiene.',
   bullets:
     [ 'E-commerce site with integrated payment option, built in under two weeks',
       'Practiced Agile workflow and maintained excellent Git hygiene',
@@ -141,9 +150,11 @@ const projectData = [{
   priority: 4
 }, {
   name: 'Keeping Facebook Cheerful',
-  role: 'Solo Engineer',
-  paragraph:
+  role: 'Fullstack Engineer',
+  par2:
     "Since I was a child, I've never liked politics; usually after an election, people calm down and start getting along again. But after the 2016 election, nobody calmed down. Rather than leaving facebook (and missing the delightful photos of my friends' babies and dogs), I instead started asking one question every day. Some are silly, some outlandish, some simply noncontroversial. People have really enjoyed having an oasis where nobody's confronting anybody, but I've asked over 800 questions by now! It seemed time to build an archive that people besides me could peruse.",
+  paragraph:
+    'Created an archive of nearly a thousand public Facebook posts (required scraping the DOM more than 800 times to set up).',
   bullets:
     [ 'Display of longstanding personal project, asking silly/creative questions daily',
       'Populating archive required scraping the DOM 800x in real time',
