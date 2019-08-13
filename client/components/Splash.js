@@ -17,7 +17,7 @@ const Splash = () => (
       Code</a>, with a certificate in web development (JavaScript front and back end).
       Since graduation I've been teaching myself Python to have more options for
       data analysis projects.</p>
-      <p>Currently seeking a software engineering job in NYC.</p>
+      <p>Currently seeking a software engineering job in Pittsburgh or NYC.</p>
     </div>
   </div>
 )
