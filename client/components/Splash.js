@@ -5,7 +5,7 @@ const Splash = () => (
     <div id="profile">
       <img
         id="profile-pic"
-        src="images/profile.jpg"
+        src="images/profile-linkedin.jpg"
         alt="Claire Gilligan profile picture"
       />
     </div>
