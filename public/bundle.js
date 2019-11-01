@@ -634,9 +634,9 @@ var Splash = function Splash() {
     alt: "Claire Gilligan profile picture"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "profile-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm a new graduate of the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've just pivoted to software development after some years working detail-oriented editorial jobs. I have yet to discover a portion of this field that I don't enjoy, but am especially intrigued by working with data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'm a recent graduate of the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.gracehopper.com"
-  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking a software engineering job in Pittsburgh or NYC.")));
+  }, "Grace Hopper Program at Fullstack Academy of Code"), ", with a certificate in web development (JavaScript front and back end). Since graduation I've been teaching myself Python to have more options for data analysis projects."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently seeking an entry-level software engineering job in Pittsburgh.")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Splash);
